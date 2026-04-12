@@ -4,448 +4,659 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pheeew. — The Synbiotic Squeeze</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Pre + probiotic in one squeeze. Spore-forming. Shelf-stable. 100mL. The synbiotic squeeze for real life.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--lime:#DAFF00;--black:#0A0A0A;--near:#1A1A1A;--dark:#2A2A2A;--mid:#666;--light:#999;--off:#F8F8F6;--white:#FFF;--tp:#FF6B35;--gp:#D4A843;--wb:#8B45A6;--green:#27ae60;--red:#C44B4B}
+:root{
+--lime:#DAFF00;--lime-dk:#B8D900;--black:#111;--near:#1A1A1A;--dark:#333;
+--mid:#666;--light:#999;--border:#E8E8E8;--bg:#FAFAFA;--white:#FFF;
+--tp:#FF6B35;--gp:#D4A843;--wb:#8B45A6;--green:#2D8C4E;--red:#C44B4B;
+}
 html{font-size:16px;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;color:var(--near);background:var(--black);line-height:1.6}
+body{font-family:'DM Sans',sans-serif;color:var(--black);background:var(--white);line-height:1.65}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,10,10,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:56px}
-.logo{font-family:'Poppins',sans-serif;font-size:22px;font-weight:900;color:var(--lime);cursor:pointer;letter-spacing:-.5px}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:60px;transition:.2s}
+.logo{font-family:'Poppins',sans-serif;font-size:24px;font-weight:900;color:var(--black);cursor:pointer;letter-spacing:-.5px}
+.logo span{color:var(--tp)}
 .nav-links{display:flex;gap:4px}
-.nav-links a{color:#777;text-decoration:none;font-size:11px;font-weight:600;padding:6px 14px;border-radius:100px;cursor:pointer;transition:.15s;letter-spacing:.3px}
-.nav-links a:hover,.nav-links a.on{color:var(--black);background:var(--lime)}
-.nav-cta{background:var(--lime);color:var(--black);padding:8px 20px;border-radius:100px;font-size:12px;font-weight:700;cursor:pointer;border:none;text-decoration:none}
-@media(max-width:768px){.nav-links{display:none}.nav-cta{font-size:11px;padding:7px 14px}}
+.nav-links a{color:var(--mid);text-decoration:none;font-size:12px;font-weight:600;padding:7px 14px;border-radius:100px;cursor:pointer;transition:.15s}
+.nav-links a:hover{color:var(--black);background:var(--bg)}
+.nav-links a.on{color:var(--white);background:var(--black)}
+.nav-r{display:flex;gap:8px;align-items:center}
+.nav-cta{background:var(--black);color:var(--white);padding:9px 20px;border-radius:100px;font-size:12px;font-weight:700;cursor:pointer;border:none;text-decoration:none;transition:.2s}
+.nav-cta:hover{background:var(--lime);color:var(--black)}
+@media(max-width:768px){.nav-links{display:none}}
+
+/* PROMO BAR */
+.promo{background:var(--black);color:var(--white);text-align:center;padding:8px;font-size:11px;font-weight:600;letter-spacing:.5px;position:fixed;top:0;left:0;right:0;z-index:201}
+.promo+nav{top:32px}
+.promo~.spacer{height:92px}
 
 /* PAGE SYSTEM */
 .page{display:none}.page.active{display:block}
-.spacer{height:56px}
+.spacer{height:60px}
 
 /* SECTIONS */
-.s{padding:64px 24px;max-width:960px;margin:0 auto}
-.s.wide{max-width:1080px}
-.s.narrow{max-width:700px}
-.dark{background:var(--black);color:var(--white)}
-.ndark{background:var(--near);color:var(--white)}
-.wht{background:var(--white);color:var(--near)}
-.owht{background:var(--off);color:var(--near)}
-.lm{background:var(--lime);color:var(--black)}
+.s{padding:72px 28px;max-width:1000px;margin:0 auto}
+.s.wide{max-width:1120px}
+.s.narrow{max-width:640px}
+.s.full{max-width:100%;padding-left:0;padding-right:0}
+.bg-w{background:var(--white)}
+.bg-f{background:var(--bg)}
+.bg-b{background:var(--black);color:var(--white)}
+.bg-l{background:var(--lime);color:var(--black)}
+.bg-tp{background:#FFF5F0}
+.bg-gp{background:#FFFBF0}
+.bg-wb{background:#F8F0FC}
 
 /* TYPOGRAPHY */
-.tag{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--lime);margin-bottom:8px}
-h2{font-family:'Poppins',sans-serif;font-size:36px;font-weight:900;line-height:1.1;margin-bottom:16px;letter-spacing:-1px}
-h3{font-family:'Poppins',sans-serif;font-size:22px;font-weight:800;line-height:1.2;margin-bottom:10px}
-h4{font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px}
-.lg{font-size:16px;line-height:1.7;color:var(--mid)}
-.sm{font-size:14px;line-height:1.7;color:var(--light)}
-.xs{font-size:12px;line-height:1.6;color:var(--light)}
+.tag{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px}
+.tag-b{color:var(--black)}.tag-l{color:var(--lime)}.tag-tp{color:var(--tp)}.tag-gp{color:var(--gp)}.tag-wb{color:var(--wb)}.tag-m{color:var(--mid)}
+h1{font-family:'Poppins',sans-serif;font-size:48px;font-weight:900;line-height:1.08;letter-spacing:-1.5px;margin-bottom:16px}
+h2{font-family:'Poppins',sans-serif;font-size:34px;font-weight:800;line-height:1.12;letter-spacing:-.8px;margin-bottom:14px}
+h3{font-family:'Poppins',sans-serif;font-size:22px;font-weight:700;line-height:1.2;margin-bottom:8px}
+h4{font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;margin-bottom:5px}
+.lg{font-size:17px;line-height:1.7;color:var(--mid)}
+.md{font-size:15px;line-height:1.7;color:var(--mid)}
+.sm{font-size:13px;line-height:1.7;color:var(--light)}
 .tc{text-align:center}
-@media(max-width:600px){h2{font-size:28px}h3{font-size:18px}}
+@media(max-width:600px){h1{font-size:32px}h2{font-size:26px}h3{font-size:18px}}
 
 /* BUTTONS */
-.btn{display:inline-block;padding:14px 32px;border-radius:100px;font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;text-decoration:none;border:none;cursor:pointer;transition:.2s}
-.btn-l{background:var(--lime);color:var(--black)}
-.btn-l:hover{background:#c8eb00;transform:translateY(-1px)}
-.btn-b{background:var(--black);color:var(--white)}
-.btn-o{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.25)}
-.btn-o:hover{border-color:var(--lime);color:var(--lime)}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:14px 32px;border-radius:100px;font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;text-decoration:none;border:none;cursor:pointer;transition:.2s}
+.btn-b{background:var(--black);color:var(--white)}.btn-b:hover{background:var(--near)}
+.btn-l{background:var(--lime);color:var(--black)}.btn-l:hover{background:var(--lime-dk)}
+.btn-w{background:var(--white);color:var(--black)}.btn-w:hover{background:var(--bg)}
+.btn-o{background:transparent;color:var(--black);border:2px solid var(--border)}.btn-o:hover{border-color:var(--black)}
 .btn-s{padding:10px 22px;font-size:12px}
-.btn-f{width:100%;text-align:center;display:block}
 
 /* GRID */
-.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-@media(max-width:700px){.g3,.g2,.g4{grid-template-columns:1fr}}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:768px){.g2,.g3,.g4{grid-template-columns:1fr}}
 
 /* CARDS */
-.card{border-radius:16px;padding:28px 24px;background:var(--dark);border:1px solid rgba(255,255,255,.06);transition:.2s}
-.wht .card{background:var(--white);border-color:rgba(0,0,0,.06);box-shadow:0 2px 12px rgba(0,0,0,.04)}
-.card:hover{transform:translateY(-2px)}
-.ci{font-size:28px;margin-bottom:12px}
+.card{border-radius:20px;padding:28px 24px;background:var(--white);border:1px solid var(--border);transition:.2s}
+.card:hover{box-shadow:0 8px 24px rgba(0,0,0,.06);transform:translateY(-2px)}
+.bg-b .card{background:var(--near);border-color:rgba(255,255,255,.08)}
+.ci{font-size:32px;margin-bottom:14px}
 
-/* FLAVOR CARDS */
-.fc{border-radius:20px;padding:32px 24px;text-align:center;transition:.2s}
-.fc:hover{transform:translateY(-3px)}
-.fc.tp{background:linear-gradient(135deg,#FFF3ED,#FFE4D6);border:2px solid rgba(255,107,53,.15)}
-.fc.gp{background:linear-gradient(135deg,#FFF9E6,#FFF0C2);border:2px solid rgba(212,168,67,.15)}
-.fc.wb{background:linear-gradient(135deg,#F5EDFB,#E8D5F5);border:2px solid rgba(139,69,166,.15)}
-.fn{font-family:'Poppins',sans-serif;font-size:22px;font-weight:900}
-.func{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+/* PRODUCT IMAGES */
+.ph{background:var(--bg);border-radius:16px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:11px;font-weight:600;text-align:center;padding:16px;min-height:200px;border:1px solid var(--border)}
 
-/* PHOTO PLACEHOLDER */
-.ph{background:linear-gradient(135deg,#222,#333);border:2px dashed rgba(218,255,0,.3);border-radius:16px;display:flex;align-items:center;justify-content:center;color:rgba(218,255,0,.5);font-size:11px;font-weight:600;text-align:center;padding:16px;min-height:200px}
+/* SKU CARDS */
+.sku-card{border-radius:24px;padding:32px 24px;text-align:center;transition:.2s;cursor:pointer}
+.sku-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.08)}
+.sku-card.tp{background:linear-gradient(160deg,#FFF5EE,#FFE8D6);border:2px solid rgba(255,107,53,.12)}
+.sku-card.gp{background:linear-gradient(160deg,#FFFBF0,#FFF3D6);border:2px solid rgba(212,168,67,.12)}
+.sku-card.wb{background:linear-gradient(160deg,#F9F0FF,#EDE0F8);border:2px solid rgba(139,69,166,.12)}
+.sku-func{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+.sku-name{font-family:'Poppins',sans-serif;font-size:22px;font-weight:800}
+.sku-flavor{font-size:13px;color:var(--mid);margin-top:2px}
+.sku-desc{font-size:12px;color:var(--mid);margin-top:8px;line-height:1.6}
+.sku-price{font-size:11px;margin-top:10px;color:var(--light)}
 
-/* STATS */
-.stat-row{display:flex;gap:0;border-radius:12px;overflow:hidden;margin:20px 0}
-.stat-item{flex:1;padding:20px 16px;text-align:center;background:var(--dark)}
-.stat-item+.stat-item{border-left:1px solid rgba(255,255,255,.06)}
-.stat-num{font-family:'Poppins',sans-serif;font-size:28px;font-weight:900;color:var(--lime)}
-.stat-label{font-size:10px;color:var(--light);letter-spacing:.5px;margin-top:2px}
+/* TRUST STRIP */
+.trust-strip{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;padding:16px 0}
+.trust-item{text-align:center}
+.trust-item .ico{font-size:24px;margin-bottom:4px}
+.trust-item .txt{font-size:11px;font-weight:600;color:var(--mid)}
 
-/* ACCORDION (FAQ) */
-.acc{border-bottom:1px solid rgba(0,0,0,.08);padding:16px 0;cursor:pointer}
-.acc-q{font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
-.acc-q::after{content:'+';font-size:20px;color:var(--lime);font-weight:300}
-.acc.open .acc-q::after{content:'−'}
-.acc-a{max-height:0;overflow:hidden;transition:max-height .3s;font-size:14px;color:var(--mid);line-height:1.7}
-.acc.open .acc-a{max-height:500px;padding-top:10px}
+/* STAT BAR */
+.stat-bar{display:flex;gap:0;border-radius:16px;overflow:hidden}
+.stat-i{flex:1;padding:20px 16px;text-align:center;background:var(--bg);border-right:1px solid var(--border)}
+.stat-i:last-child{border-right:none}
+.bg-b .stat-i{background:var(--near);border-color:rgba(255,255,255,.06)}
+.stat-n{font-family:'Poppins',sans-serif;font-size:24px;font-weight:900}
+.stat-l{font-size:9px;color:var(--light);letter-spacing:.5px;margin-top:2px;text-transform:uppercase}
+
+/* TOGGLE */
+.toggle-row{display:flex;gap:12px;margin-bottom:20px}
+.toggle-opt{flex:1;padding:18px 20px;border-radius:16px;border:2px solid var(--border);cursor:pointer;position:relative;transition:.2s}
+.toggle-opt.sel{border-color:var(--black);box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.toggle-badge{position:absolute;top:-10px;left:16px;background:var(--lime);color:var(--black);font-size:9px;font-weight:800;padding:3px 10px;border-radius:100px;letter-spacing:.5px}
+.toggle-perks{background:var(--bg);border-radius:10px;padding:8px 14px;margin-top:8px;display:flex;flex-wrap:wrap;gap:8px}
+.toggle-perks span{font-size:11px;font-weight:600;color:var(--green)}
+.toggle-perks span::before{content:"✓ "}
+
+/* FAQ */
+.acc{border-bottom:1px solid var(--border);padding:18px 0;cursor:pointer}
+.acc-q{font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;display:flex;justify-content:space-between;align-items:center;color:var(--black)}
+.acc-q::after{content:'+';font-size:22px;color:var(--light);font-weight:300;transition:.2s}
+.acc.open .acc-q::after{content:'−';color:var(--tp)}
+.acc-a{max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:14px;color:var(--mid);line-height:1.8}
+.acc.open .acc-a{max-height:600px;padding-top:10px}
+
+/* EMAIL */
+.email-row{display:flex;gap:0;max-width:420px;margin:0 auto;border-radius:100px;overflow:hidden;border:2px solid var(--border)}
+.bg-b .email-row{border-color:rgba(255,255,255,.15)}
+.email-row input{flex:1;padding:14px 20px;border:none;background:transparent;font-size:14px;outline:none;color:var(--black)}
+.bg-b .email-row input{color:var(--white)}
+.email-row input::placeholder{color:var(--light)}
+.email-row button{padding:14px 24px;border:none;background:var(--black);color:var(--white);font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;transition:.2s}
+.email-row button:hover{background:var(--lime);color:var(--black)}
 
 /* STICKY BAR */
-.sbar{position:fixed;bottom:0;left:0;right:0;z-index:150;background:rgba(10,10,10,.95);backdrop-filter:blur(12px);padding:10px 24px;display:flex;align-items:center;justify-content:center;gap:16px;border-top:1px solid rgba(218,255,0,.15);transform:translateY(100%);transition:.3s}
+.sbar{position:fixed;bottom:0;left:0;right:0;z-index:150;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);padding:10px 28px;display:flex;align-items:center;justify-content:center;gap:20px;border-top:1px solid var(--border);transform:translateY(100%);transition:.3s}
 .sbar.show{transform:translateY(0)}
-.sbar-price{font-family:'Poppins',sans-serif;font-size:16px;font-weight:800;color:var(--white)}
-.sbar-price span{font-size:12px;color:var(--light);font-weight:400}
 
 /* FOOTER */
-footer{background:var(--black);border-top:1px solid rgba(255,255,255,.06);padding:48px 24px 24px}
-.footer-wrap{max-width:960px;margin:0 auto}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-@media(max-width:700px){.footer-grid{grid-template-columns:1fr 1fr}}
-footer h4{color:var(--white);font-size:12px;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
-footer a{color:var(--light);text-decoration:none;font-size:13px;display:block;margin:4px 0;transition:.15s}
+footer{background:var(--black);color:var(--white);padding:56px 28px 28px}
+.footer-wrap{max-width:1000px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr}}
+footer h4{color:var(--white);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+footer a{color:var(--light);text-decoration:none;font-size:13px;display:block;margin:5px 0;transition:.15s}
 footer a:hover{color:var(--lime)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.06);margin-top:32px;padding-top:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-.footer-bottom p{font-size:11px;color:#444}
-
-/* EMAIL CAPTURE */
-.email-row{display:flex;gap:0;max-width:480px;margin:0 auto}
-.email-row input{flex:1;padding:14px 18px;border:2px solid rgba(255,255,255,.15);border-right:none;border-radius:100px 0 0 100px;background:rgba(255,255,255,.06);color:var(--white);font-size:14px;outline:none}
-.email-row input::placeholder{color:#555}
-.email-row input:focus{border-color:var(--lime)}
-.email-row button{padding:14px 24px;border:none;border-radius:0 100px 100px 0;background:var(--lime);color:var(--black);font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);margin-top:32px;padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.footer-bottom p{font-size:11px;color:#555}
 
 /* LEGAL */
-.legal-page{max-width:700px;margin:0 auto;padding:80px 24px 60px}
-.legal-page h1{font-family:'Poppins',sans-serif;font-size:28px;font-weight:900;margin-bottom:6px}
-.legal-page .date{font-size:12px;color:var(--light);margin-bottom:24px}
-.legal-page h2{font-size:18px;margin-top:28px;margin-bottom:8px;letter-spacing:0}
-.legal-page p,.legal-page li{font-size:14px;color:#555;line-height:1.8;margin:6px 0}
+.legal-page{max-width:640px;margin:0 auto;padding:80px 28px 60px}
+.legal-page h1{font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;margin-bottom:4px}
+.legal-page .date{font-size:12px;color:var(--light);margin-bottom:28px}
+.legal-page h2{font-size:17px;margin-top:28px;margin-bottom:8px;letter-spacing:0}
+.legal-page p,.legal-page li{font-size:14px;color:var(--mid);line-height:1.8;margin:6px 0}
 .legal-page ul{padding-left:20px}
-.legal-page a{color:var(--lime)}
+.legal-page a{color:var(--tp)}
+
+/* COMPARISON */
+.cmp{border-radius:16px;overflow:hidden;border:1px solid var(--border)}
+.cmp-row{display:flex;border-bottom:1px solid var(--border);font-size:13px}
+.cmp-row:last-child{border-bottom:none}
+.cmp-row .label{flex:1.2;padding:12px 16px;font-weight:600;background:var(--bg)}
+.cmp-row .them{flex:1;padding:12px 16px;text-align:center;color:var(--light)}
+.cmp-row .us{flex:1;padding:12px 16px;text-align:center;font-weight:600;color:var(--green);background:rgba(45,140,78,.03)}
+.cmp-head .label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--light)}
+.cmp-head .us{color:var(--tp);font-weight:800}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:32px}
+.timeline::before{content:'';position:absolute;left:10px;top:8px;bottom:8px;width:2px;background:var(--border)}
+.tl-item{position:relative;margin-bottom:24px}
+.tl-item::before{content:'';position:absolute;left:-26px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--lime);border:2px solid var(--white)}
+.tl-item h4{font-size:14px}
+.tl-item p{font-size:13px;color:var(--mid);margin-top:2px}
 </style>
 </head>
 <body>
 
-<!-- ====== NAVIGATION ====== -->
+<!-- PROMO BAR -->
+<div class="promo">Subscribe & Save 15% · Free Shipping · Cancel Anytime → <a onclick="showPage('shop')" style="color:var(--lime);cursor:pointer;text-decoration:underline">Shop Now</a></div>
+
+<!-- NAV -->
 <nav>
-<div class="logo" onclick="showPage('home')">Pheeew.</div>
+<div class="logo" onclick="showPage('home')">Pheeew<span>.</span></div>
 <div class="nav-links">
 <a onclick="showPage('home')" class="on">Home</a>
 <a onclick="showPage('shop')">Shop</a>
-<a onclick="showPage('story')">Our Story</a>
 <a onclick="showPage('science')">The Science</a>
+<a onclick="showPage('gut-club')">Gut Club</a>
+<a onclick="showPage('story')">Our Story</a>
 <a onclick="showPage('faq')">FAQ</a>
 </div>
-<a class="nav-cta" onclick="showPage('shop')">Subscribe & Save →</a>
+<div class="nav-r">
+<a class="nav-cta" onclick="showPage('shop')">Subscribe →</a>
+</div>
 </nav>
 
-<!-- ====== HOME PAGE ====== -->
+<!-- ======================================== -->
+<!-- HOME -->
+<!-- ======================================== -->
 <div class="page active" id="home">
-<div class="spacer"></div>
+<div class="spacer" style="height:92px"></div>
 
 <!-- HERO -->
-<div class="dark">
-<div class="s tc">
-<p class="tag">THE SYNBIOTIC SQUEEZE</p>
-<h2 style="font-size:44px;max-width:700px;margin:0 auto 16px">Most probiotics don't survive your stomach.<br><span style="color:var(--lime)">Pheeew does.</span></h2>
-<p class="lg" style="max-width:520px;margin:0 auto 24px;color:var(--light)">Pre + probiotic in one squeeze. Spore-forming. Shelf-stable. 100mL. Done.</p>
+<div class="bg-w">
+<div class="s tc" style="padding-top:48px;padding-bottom:48px">
+<p class="tag tag-tp">THE SYNBIOTIC SQUEEZE™</p>
+<h1 style="max-width:680px;margin:0 auto 16px">Most probiotics don't survive your stomach.<br><span style="color:var(--tp)">Pheeew does.</span></h1>
+<p class="lg" style="max-width:480px;margin:0 auto 28px">Pre + probiotic in one squeeze. Spore-forming. Shelf-stable. 100mL. Done.</p>
 <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-<a class="btn btn-l" onclick="showPage('shop')">Subscribe & Save 15%</a>
+<a class="btn btn-b" onclick="showPage('shop')">Subscribe & Save 15% →</a>
 <a class="btn btn-o" onclick="showPage('shop')">Shop One-Time</a>
 </div>
-<div class="ph" style="margin-top:32px;min-height:300px">[ HERO IMAGE: 3 pouches (Tropical, Ginger, Berry) with squeeze action — 3D render ]</div>
+<p style="font-size:12px;color:var(--light);margin-top:10px">$69/month · 30 pouches · Cancel anytime</p>
+<div class="ph" style="margin-top:32px;min-height:360px;border-radius:24px">[ HERO: 3 pouches in squeeze action — lifestyle photography or 3D render. Model holding pouch. Bright, airy, white background. ]</div>
 </div>
 </div>
 
-<!-- STAT BAR -->
-<div class="ndark">
-<div class="stat-row" style="max-width:960px;margin:0 auto">
-<div class="stat-item"><div class="stat-num">1B</div><div class="stat-label">CFU Live Probiotics</div></div>
-<div class="stat-item"><div class="stat-num">SNZ 1969</div><div class="stat-label">Clinically Studied Strain</div></div>
-<div class="stat-item"><div class="stat-num">100mL</div><div class="stat-label">One Squeeze. Done.</div></div>
-<div class="stat-item"><div class="stat-num">$2.30</div><div class="stat-label">Per Pouch (Subscriber)</div></div>
+<!-- TRUST STRIP -->
+<div class="bg-f">
+<div class="s" style="padding:20px 28px">
+<div class="trust-strip">
+<div class="trust-item"><div class="ico">🧬</div><div class="txt">Clinically Studied Strain</div></div>
+<div class="trust-item"><div class="ico">🛡️</div><div class="txt">Spore-Forming Probiotic</div></div>
+<div class="trust-item"><div class="ico">📋</div><div class="txt">Full Ingredient Transparency</div></div>
+<div class="trust-item"><div class="ico">🌡️</div><div class="txt">Shelf-Stable · No Fridge</div></div>
+<div class="trust-item"><div class="ico">🧪</div><div class="txt">FDA GRAS (GRN 597)</div></div>
+</div>
 </div>
 </div>
 
 <!-- WHAT IS SYNBIOTIC -->
-<div class="wht">
+<div class="bg-w">
 <div class="s tc">
-<p class="tag" style="color:var(--tp)">WHY SYNBIOTIC</p>
-<h2>You know probiotics.<br>You know prebiotics.<br><span style="color:var(--tp)">Meet synbiotics.</span></h2>
-<div class="g3" style="margin-top:24px;text-align:left">
+<p class="tag tag-b">WHY SYNBIOTIC</p>
+<h2>You know probiotics.<br>You know prebiotics.<br>Meet <span style="color:var(--tp)">synbiotics.</span></h2>
+<p class="md" style="max-width:520px;margin:0 auto 28px">Most gut health products give you one or the other. Pheeew gives you both — prebiotics that feed the good bacteria, plus a live probiotic that actually survives the trip.</p>
+<div class="g3">
 <div class="card">
 <div class="ci">🌱</div>
 <h4>Prebiotics</h4>
-<p>Food for the good bacteria already in your gut. We use XOS + Fibersol-2L — real prebiotic fiber, not filler.</p>
+<p class="sm">Food for the good bacteria already in your gut. We use XOS + Fibersol-2L — clinically studied prebiotic fiber, not cheap filler.</p>
 </div>
 <div class="card">
 <div class="ci">🦠</div>
 <h4>Probiotics</h4>
-<p>Live good bacteria. We use Bacillus coagulans SNZ 1969 — a spore-forming strain that actually survives your stomach.</p>
+<p class="sm">Live good bacteria. We use Bacillus coagulans SNZ 1969 — a spore-forming strain with 50+ years of safe use and 4 published clinical trials.</p>
 </div>
-<div class="card" style="border-color:var(--lime);border-width:2px">
+<div class="card" style="border-color:var(--tp);border-width:2px">
 <div class="ci">⚡</div>
 <h4 style="color:var(--tp)">Synbiotic = Both</h4>
-<p>Pre + pro working together. Most brands give you one or the other. Pheeew gives you both in one squeeze.</p>
+<p class="sm">Pre + pro working together. The prebiotics feed the probiotics. The probiotics support your gut. Together, they're more effective than either alone.</p>
 </div>
 </div>
 </div>
 </div>
 
 <!-- WHY SPORE-FORMING -->
-<div class="dark">
+<div class="bg-f">
 <div class="s">
-<div class="g2" style="align-items:center">
+<div class="g2" style="gap:40px;align-items:center">
 <div>
-<p class="tag">THE SCIENCE</p>
-<h2>Most probiotics are dead before they reach your gut.</h2>
-<p class="lg" style="color:var(--light)">Standard probiotics (Lactobacillus, Bifidobacterium) die in heat, on shelves, and in stomach acid.</p>
-<p class="lg" style="color:var(--white);margin-top:12px"><strong>Bacillus coagulans SNZ 1969</strong> is different. It's spore-forming — it creates a protective shell that survives everything. Shelf. Stomach acid. Arrives in your gut alive. Then activates.</p>
-<p class="xs" style="margin-top:12px">4+ randomized, placebo-controlled trials published. 50+ years of safe human consumption. FDA GRAS (GRN 597, 864).</p>
+<p class="tag tag-tp">THE SCIENCE</p>
+<h2>Your probiotic is probably dead.</h2>
+<p class="md">Standard probiotics — Lactobacillus, Bifidobacterium — are fragile. They die in heat. They die on shelves. They die in your stomach acid.</p>
+<p class="md" style="color:var(--black);margin-top:12px"><strong>Bacillus coagulans SNZ 1969</strong> is different. It's spore-forming — it creates a protective shell that survives everything. The shelf. Your stomach. It reaches your gut alive. Then it activates.</p>
+<ul style="margin-top:12px;padding-left:18px">
+<li class="sm">4+ randomized, placebo-controlled clinical trials</li>
+<li class="sm">50+ years of safe human consumption</li>
+<li class="sm">FDA GRAS — GRN 597 & 864</li>
+<li class="sm">Manufactured by Sanzyme Biologics</li>
+</ul>
 <a class="btn btn-o btn-s" onclick="showPage('science')" style="margin-top:16px">Read the research →</a>
 </div>
-<div class="ph" style="min-height:300px">[ GRAPHIC: Spore-forming vs non-spore-forming survival comparison — Dawon to design ]</div>
+<div>
+<div class="cmp">
+<div class="cmp-row cmp-head"><div class="label"></div><div class="them">Standard Probiotics</div><div class="us">Pheeew (SNZ 1969)</div></div>
+<div class="cmp-row"><div class="label">Survives stomach acid</div><div class="them">❌ Most die</div><div class="us">✅ Spore-forming</div></div>
+<div class="cmp-row"><div class="label">Shelf-stable</div><div class="them">❌ Needs fridge</div><div class="us">✅ No fridge needed</div></div>
+<div class="cmp-row"><div class="label">Reaches gut alive</div><div class="them">❌ 10-40% survival</div><div class="us">✅ Arrives intact</div></div>
+<div class="cmp-row"><div class="label">Clinical evidence</div><div class="them">⚠️ Varies</div><div class="us">✅ 4+ published RCTs</div></div>
+<div class="cmp-row"><div class="label">FDA GRAS status</div><div class="them">⚠️ Not all</div><div class="us">✅ GRN 597 & 864</div></div>
+</div>
+</div>
 </div>
 </div>
 </div>
 
 <!-- 3 SKUS -->
-<div class="owht">
+<div class="bg-w">
 <div class="s tc">
-<p class="tag" style="color:var(--near)">THREE FUNCTIONS. ONE GUT.</p>
+<p class="tag tag-b">THREE FUNCTIONS. ONE GUT.</p>
 <h2>Every squeeze starts with your gut.<br>The +1 is up to you.</h2>
-<p class="lg" style="max-width:540px;margin:0 auto 28px">Same synbiotic base in every pouch. Each flavor adds a targeted function on top.</p>
+<p class="md" style="max-width:500px;margin:0 auto 28px">Same synbiotic base in every pouch. Each flavor adds a targeted function on top.</p>
 <div class="g3">
-<div class="fc tp">
-<p class="func" style="color:var(--tp)">GUT + DIGESTION</p>
-<div class="ph" style="min-height:180px;border-color:var(--tp);margin-bottom:14px">[ 3D Render: Tropical Punch pouch ]</div>
-<p class="fn" style="color:var(--tp)">Tropical Punch</p>
-<p style="font-size:13px;color:var(--mid);margin-top:6px">Your daily gut reset. Mango, tropical fruit, banana. Synbiotic base — nothing extra needed.</p>
-<p style="font-size:11px;color:var(--tp);font-weight:700;margin-top:8px">The everyday squeeze.</p>
+<div class="sku-card tp" onclick="showPage('shop')">
+<div class="ph" style="min-height:200px;border:none;background:linear-gradient(135deg,#FFD4B8,#FFB088);border-radius:16px;margin-bottom:14px">[ Tropical Punch pouch render ]</div>
+<p class="sku-func" style="color:var(--tp)">GUT + DIGESTION</p>
+<p class="sku-name" style="color:var(--tp)">Tropical Punch</p>
+<p class="sku-flavor">Mango · Tropical Fruit · Banana</p>
+<p class="sku-desc">Your daily gut reset. Pure synbiotic base — no extras needed. The everyday squeeze.</p>
+<p class="sku-price">From $2.30/pouch</p>
 </div>
-<div class="fc gp">
-<p class="func" style="color:var(--gp)">GUT + IMMUNITY</p>
-<div class="ph" style="min-height:180px;border-color:var(--gp);margin-bottom:14px">[ 3D Render: Ginger Pear pouch ]</div>
-<p class="fn" style="color:var(--gp)">Ginger Pear</p>
-<p style="font-size:13px;color:var(--mid);margin-top:6px">Gut armor, ginger-powered. Synbiotic + Vitamin C. Apple, ginger, pear.</p>
-<p style="font-size:11px;color:var(--gp);font-weight:700;margin-top:8px">Defense starts in the gut.</p>
+<div class="sku-card gp" onclick="showPage('shop')">
+<div class="ph" style="min-height:200px;border:none;background:linear-gradient(135deg,#FFE8A0,#FFD460);border-radius:16px;margin-bottom:14px">[ Ginger Pear pouch render ]</div>
+<p class="sku-func" style="color:var(--gp)">GUT + IMMUNITY</p>
+<p class="sku-name" style="color:var(--gp)">Ginger Pear</p>
+<p class="sku-flavor">Apple · Ginger · Pear</p>
+<p class="sku-desc">Gut armor, ginger-powered. Synbiotic + Vitamin C. Defense starts in the gut.</p>
+<p class="sku-price">From $2.30/pouch</p>
 </div>
-<div class="fc wb">
-<p class="func" style="color:var(--wb)">GUT + ENERGY</p>
-<div class="ph" style="min-height:180px;border-color:var(--wb);margin-bottom:14px">[ 3D Render: Wild Berries pouch ]</div>
-<p class="fn" style="color:var(--wb)">Wild Berries</p>
-<p style="font-size:13px;color:var(--mid);margin-top:6px">Clean energy from the gut up. Synbiotic + B vitamins + green tea. Blueberry, elderberry, cranberry.</p>
-<p style="font-size:11px;color:var(--wb);font-weight:700;margin-top:8px">No crash. Just go.</p>
+<div class="sku-card wb" onclick="showPage('shop')">
+<div class="ph" style="min-height:200px;border:none;background:linear-gradient(135deg,#DDB8F0,#C490E0);border-radius:16px;margin-bottom:14px">[ Wild Berries pouch render ]</div>
+<p class="sku-func" style="color:var(--wb)">GUT + ENERGY</p>
+<p class="sku-name" style="color:var(--wb)">Wild Berries</p>
+<p class="sku-flavor">Blueberry · Elderberry · Cranberry</p>
+<p class="sku-desc">Clean energy from the gut up. Synbiotic + B vitamins + green tea. No crash.</p>
+<p class="sku-price">From $2.30/pouch</p>
 </div>
 </div>
-<a class="btn btn-b" onclick="showPage('shop')" style="margin-top:24px">Shop All Flavors →</a>
+<a class="btn btn-b" onclick="showPage('shop')" style="margin-top:28px">Shop All Flavors →</a>
 </div>
 </div>
 
-<!-- TRUST STRIP -->
-<div class="dark">
+<!-- STAT BAR -->
+<div class="bg-b">
+<div class="s" style="padding:0 28px">
+<div class="stat-bar">
+<div class="stat-i"><div class="stat-n" style="color:var(--lime)">1B</div><div class="stat-l">CFU Live Probiotics</div></div>
+<div class="stat-i"><div class="stat-n" style="color:var(--lime)">SNZ 1969</div><div class="stat-l">Clinically Studied Strain</div></div>
+<div class="stat-i"><div class="stat-n" style="color:var(--lime)">100mL</div><div class="stat-l">One Squeeze. Done.</div></div>
+<div class="stat-i"><div class="stat-n" style="color:var(--lime)">$2.30</div><div class="stat-l">Per Pouch (Subscriber)</div></div>
+</div>
+</div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="bg-w">
+<div class="s tc">
+<p class="tag tag-b">HOW IT WORKS</p>
+<h2>Squeeze. Drink. Done.</h2>
+<p class="md" style="max-width:480px;margin:0 auto 28px">No powder. No pills. No blender. No forgetting. Just grab, squeeze, and get on with your day.</p>
+<div class="g3">
+<div class="card tc">
+<div style="font-size:48px;margin-bottom:12px">1</div>
+<h4>Grab your pouch</h4>
+<p class="sm">Keep it in your bag, desk, car, gym bag. No refrigeration needed.</p>
+</div>
+<div class="card tc">
+<div style="font-size:48px;margin-bottom:12px">2</div>
+<h4>Squeeze & drink</h4>
+<p class="sm">100mL of synbiotic goodness. Tastes like real fruit because it is real fruit.</p>
+</div>
+<div class="card tc">
+<div style="font-size:48px;margin-bottom:12px">3</div>
+<h4>Your gut says Pheeew.</h4>
+<p class="sm">1 billion spore-forming probiotics + prebiotic fiber reach your gut. Every day. 5 seconds.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- WHAT TO EXPECT -->
+<div class="bg-f">
 <div class="s">
-<div class="g4 tc">
-<div><p style="font-size:28px">🧬</p><h4 style="color:var(--white);font-size:13px">Clinically Studied Strain</h4><p class="xs">SNZ 1969 · 4+ published RCTs</p></div>
-<div><p style="font-size:28px">📋</p><h4 style="color:var(--white);font-size:13px">Full Transparency</h4><p class="xs">Every ingredient. Every dose. Published.</p></div>
-<div><p style="font-size:28px">🌡️</p><h4 style="color:var(--white);font-size:13px">Shelf-Stable</h4><p class="xs">No fridge. Bag, desk, car.</p></div>
-<div><p style="font-size:28px">✋</p><h4 style="color:var(--white);font-size:13px">No Proprietary Blends</h4><p class="xs">If we can't show you, we don't use it.</p></div>
+<div class="g2" style="gap:40px;align-items:start">
+<div>
+<p class="tag tag-tp">RESULTS TIMELINE</p>
+<h2>What to expect.</h2>
+<p class="md">Gut health is a daily practice, not an overnight fix. Here's what consistent daily use looks like.</p>
+</div>
+<div class="timeline">
+<div class="tl-item">
+<h4>Week 1-2</h4>
+<p>Your gut microbiome begins to adjust. Some people notice improved comfort after meals. Others feel subtle shifts in energy. This is your body adapting.</p>
+</div>
+<div class="tl-item">
+<h4>Week 2-4</h4>
+<p>Digestive regularity improves. The synbiotic combination of prebiotics feeding probiotics starts building a stronger microbiome foundation.</p>
+</div>
+<div class="tl-item">
+<h4>Month 1-3</h4>
+<p>Consistent users report feeling lighter, more regular, and more energized. The spore-forming probiotics have established themselves in your gut.</p>
+</div>
+<div class="tl-item">
+<h4>Month 3+</h4>
+<p>Your new baseline. Daily gut support is now a habit, not a chore. This is where long-term benefits compound.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 
 <!-- SOCIAL PROOF -->
-<div class="wht">
+<div class="bg-w">
 <div class="s tc">
-<p class="tag" style="color:var(--mid)">WHAT PEOPLE ARE SAYING</p>
-<h3>Reviews coming soon.</h3>
-<p class="lg" style="max-width:480px;margin:0 auto">We haven't launched yet. When we do, real reviews from real people will live here. No fake testimonials. Ever.</p>
+<p class="tag tag-m">REVIEWS</p>
+<h3>Real reviews. Coming soon.</h3>
+<p class="md" style="max-width:420px;margin:0 auto">We haven't launched yet. When we do, verified buyer reviews will live here. No fake testimonials. Ever.</p>
 </div>
 </div>
 
 <!-- CTA BANNER -->
-<div class="lm">
-<div class="s tc">
-<h2 style="font-size:32px">Your gut is waiting.</h2>
-<p style="font-size:16px;max-width:440px;margin:0 auto 20px">$69/month for 30 pouches. Subscribe and save 15%. Cancel anytime.</p>
+<div class="bg-l">
+<div class="s tc" style="padding:48px 28px">
+<h2 style="font-size:30px">Your gut is waiting.</h2>
+<p style="font-size:16px;max-width:400px;margin:0 auto 20px">$69/month for 30 pouches. Subscribe and save 15%. Cancel anytime.</p>
 <a class="btn btn-b" onclick="showPage('shop')">Start Your Subscription →</a>
 </div>
 </div>
 
 <!-- EMAIL CAPTURE -->
-<div class="dark">
-<div class="s tc narrow">
+<div class="bg-b">
+<div class="s tc narrow" style="padding:48px 28px">
 <h3 style="color:var(--white)">Not ready to buy? Stay close.</h3>
-<p class="sm" style="margin-bottom:16px">Get notified when we launch + early access pricing.</p>
+<p class="sm" style="margin-bottom:16px;color:var(--light)">Get notified when we launch + early access pricing.</p>
 <div class="email-row">
 <input type="email" placeholder="Enter your email">
 <button>Notify Me →</button>
 </div>
-<p style="font-size:10px;color:#444;margin-top:8px">No spam. Unsubscribe anytime. We respect your inbox.</p>
+<p style="font-size:10px;color:#444;margin-top:8px">No spam. Unsubscribe anytime.</p>
 </div>
 </div>
 </div>
 
-<!-- ====== SHOP PAGE ====== -->
+<!-- ======================================== -->
+<!-- SHOP -->
+<!-- ======================================== -->
 <div class="page" id="shop">
-<div class="spacer"></div>
-<div class="wht">
+<div class="spacer" style="height:92px"></div>
+<div class="bg-w">
 <div class="s">
-<p class="tag" style="color:var(--near)">SHOP</p>
+<p class="tag tag-b">SHOP</p>
 <h2>Choose your squeeze.</h2>
-<p class="lg" style="margin-bottom:24px">Every pouch: 1B CFU B. coagulans SNZ 1969 + XOS + Fibersol-2L prebiotic fiber. Full formula on every label.</p>
+<p class="md" style="margin-bottom:24px">Every pouch: 1B CFU B. coagulans SNZ 1969 + XOS + Fibersol-2L prebiotic fiber. Full formula on every label.</p>
 
 <!-- PLAN TOGGLE -->
-<div class="g2" style="margin-bottom:24px;max-width:600px">
-<div style="padding:18px 20px;border-radius:14px;border:2px solid var(--lime);background:rgba(218,255,0,.06);cursor:pointer;position:relative">
-<div style="position:absolute;top:-10px;left:14px;background:var(--lime);color:var(--black);font-size:10px;font-weight:800;padding:2px 10px;border-radius:4px">MOST POPULAR</div>
+<div class="toggle-row" style="max-width:560px">
+<div class="toggle-opt sel" style="position:relative">
+<div class="toggle-badge">MOST POPULAR</div>
 <h4>Subscribe & Save 15%</h4>
-<p style="font-size:22px;font-weight:800;font-family:'Poppins',sans-serif;color:var(--tp)">$69<span style="font-size:13px;color:var(--mid);font-weight:400">/month</span></p>
-<p class="xs" style="margin-top:4px">$2.30/pouch · Free shipping · Cancel anytime</p>
-<div style="background:rgba(218,255,0,.1);border-radius:8px;padding:8px 12px;margin-top:8px;display:flex;flex-wrap:wrap;gap:6px;font-size:11px;font-weight:600">
-<span style="color:var(--green)">✓ 15% off</span>
-<span style="color:var(--green)">✓ Free shipping</span>
-<span style="color:var(--green)">✓ Skip or pause</span>
-<span style="color:var(--green)">✓ Cancel anytime</span>
+<p style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:800;color:var(--tp)">$69<span style="font-size:14px;color:var(--mid);font-weight:400">/month</span></p>
+<p class="sm" style="margin-top:2px">$2.30/pouch</p>
+<div class="toggle-perks">
+<span>15% off</span><span>Free shipping</span><span>Skip or pause</span><span>Cancel anytime</span>
 </div>
 </div>
-<div style="padding:18px 20px;border-radius:14px;border:2px solid #ddd;cursor:pointer">
+<div class="toggle-opt">
 <h4>One-Time Purchase</h4>
-<p style="font-size:22px;font-weight:800;font-family:'Poppins',sans-serif">$79<span style="font-size:13px;color:var(--mid);font-weight:400">/box</span></p>
-<p class="xs" style="margin-top:4px">$2.63/pouch · Standard shipping</p>
+<p style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:800">$79<span style="font-size:14px;color:var(--mid);font-weight:400">/box</span></p>
+<p class="sm" style="margin-top:2px">$2.63/pouch · Standard shipping</p>
 </div>
 </div>
 
-<!-- FLAVOR CARDS -->
-<h3 style="margin-top:16px">Pick your flavor</h3>
+<!-- FLAVOR PICK -->
+<h3 style="margin-top:8px">Pick your flavor</h3>
 <div class="g3">
-<div class="fc tp" style="text-align:left;padding:20px">
-<div class="ph" style="min-height:160px;border-color:var(--tp);margin-bottom:12px;border-radius:12px">[ Tropical Punch render ]</div>
-<p class="func" style="color:var(--tp)">GUT + DIGESTION</p>
+<div class="sku-card tp" style="text-align:left;padding:20px">
+<div class="ph" style="min-height:180px;border:none;background:linear-gradient(135deg,#FFD4B8,#FFB088);border-radius:14px;margin-bottom:12px">[ Tropical Punch ]</div>
+<p class="sku-func" style="color:var(--tp)">GUT + DIGESTION</p>
 <h4 style="color:var(--tp)">Tropical Punch</h4>
 <p style="font-size:12px;color:var(--mid)">Mango · Tropical Fruit · Banana</p>
 <p style="font-size:11px;color:var(--mid);margin-top:4px">Synbiotic base. Your daily gut reset.</p>
 </div>
-<div class="fc gp" style="text-align:left;padding:20px">
-<div class="ph" style="min-height:160px;border-color:var(--gp);margin-bottom:12px;border-radius:12px">[ Ginger Pear render ]</div>
-<p class="func" style="color:var(--gp)">GUT + IMMUNITY</p>
+<div class="sku-card gp" style="text-align:left;padding:20px">
+<div class="ph" style="min-height:180px;border:none;background:linear-gradient(135deg,#FFE8A0,#FFD460);border-radius:14px;margin-bottom:12px">[ Ginger Pear ]</div>
+<p class="sku-func" style="color:var(--gp)">GUT + IMMUNITY</p>
 <h4 style="color:var(--gp)">Ginger Pear</h4>
 <p style="font-size:12px;color:var(--mid)">Apple · Ginger · Pear</p>
-<p style="font-size:11px;color:var(--mid);margin-top:4px">Synbiotic + Vitamin C. Defense from the gut.</p>
+<p style="font-size:11px;color:var(--mid);margin-top:4px">Synbiotic + Vitamin C.</p>
 </div>
-<div class="fc wb" style="text-align:left;padding:20px">
-<div class="ph" style="min-height:160px;border-color:var(--wb);margin-bottom:12px;border-radius:12px">[ Wild Berries render ]</div>
-<p class="func" style="color:var(--wb)">GUT + ENERGY</p>
+<div class="sku-card wb" style="text-align:left;padding:20px">
+<div class="ph" style="min-height:180px;border:none;background:linear-gradient(135deg,#DDB8F0,#C490E0);border-radius:14px;margin-bottom:12px">[ Wild Berries ]</div>
+<p class="sku-func" style="color:var(--wb)">GUT + ENERGY</p>
 <h4 style="color:var(--wb)">Wild Berries</h4>
 <p style="font-size:12px;color:var(--mid)">Blueberry · Elderberry · Cranberry</p>
-<p style="font-size:11px;color:var(--mid);margin-top:4px">Synbiotic + B vitamins + green tea. Clean energy.</p>
+<p style="font-size:11px;color:var(--mid);margin-top:4px">Synbiotic + B vitamins + green tea.</p>
 </div>
 </div>
 
-<div class="tc" style="margin-top:24px">
-<a class="btn btn-l">Add to Cart — $69/month →</a>
-<p style="font-size:10px;color:var(--light);margin-top:8px">30-day supply · Subscription auto-renews monthly · Cancel anytime</p>
+<div class="tc" style="margin-top:28px">
+<a class="btn btn-b" style="font-size:16px;padding:16px 40px">Add to Cart — $69/month →</a>
+<p style="font-size:11px;color:var(--light);margin-top:8px">30-day supply · Auto-renews monthly · Cancel anytime</p>
+<div class="trust-strip" style="margin-top:12px;gap:20px">
+<div class="trust-item"><div class="txt">🚚 Free Shipping</div></div>
+<div class="trust-item"><div class="txt">🔄 30-Day Guarantee</div></div>
+<div class="trust-item"><div class="txt">🧪 3rd Party Tested</div></div>
+</div>
 </div>
 </div>
 </div>
 </div>
 
-<!-- ====== OUR STORY ====== -->
-<div class="page" id="story">
-<div class="spacer"></div>
-<div class="dark">
-<div class="s narrow tc">
-<p class="tag">OUR STORY</p>
-<h2>We tried everything.<br>Nothing stuck.</h2>
-<p class="lg" style="color:var(--light);margin-bottom:24px">Kombucha goes bad in the fridge. Powders need mixing. Pills get forgotten. We wanted gut health that fits real life — something you grab, squeeze, and move on with your day.</p>
-<p class="lg" style="color:var(--white)">So we built it. Three co-founders. One product. A spore-forming probiotic that actually survives your stomach, in a format you actually enjoy.</p>
-<p class="lg" style="color:var(--lime);margin-top:16px;font-weight:600">Pheeew is what happens when you stop overcomplicating gut health.</p>
+<!-- ======================================== -->
+<!-- GUT CLUB (Subscription Page) -->
+<!-- ======================================== -->
+<div class="page" id="gut-club">
+<div class="spacer" style="height:92px"></div>
+<div class="bg-w">
+<div class="s tc">
+<p class="tag tag-tp">THE GUT CLUB</p>
+<h1 style="font-size:40px">It's a habit,<br>not a subscription.</h1>
+<p class="lg" style="max-width:500px;margin:0 auto 28px">Gut health works when it's daily. The Gut Club makes that easy — your pouches show up, you squeeze, your gut says Pheeew.</p>
 </div>
 </div>
-<div class="wht">
+
+<div class="bg-f">
 <div class="s">
-<div class="g3 tc">
-<div class="card">
-<div class="ph" style="min-height:200px;margin-bottom:12px;border-radius:12px">[ Alex photo ]</div>
-<h4>Alex Kim</h4>
-<p style="font-size:11px;color:var(--tp);font-weight:600;letter-spacing:1px;text-transform:uppercase">CO-FOUNDER & CEO</p>
-<p class="xs" style="margin-top:6px">Brand, product, creative direction. "I wanted to make something I'd actually use every day."</p>
+<h3 class="tc">How it works</h3>
+<div class="g3" style="margin-top:16px">
+<div class="card tc">
+<div style="font-size:36px;margin-bottom:8px">📦</div>
+<h4>1. Choose your flavor</h4>
+<p class="sm">Pick your function: Digestion, Immunity, or Energy. Or mix all three.</p>
 </div>
-<div class="card">
-<div class="ph" style="min-height:200px;margin-bottom:12px;border-radius:12px">[ Jason photo ]</div>
-<h4>Jason Ko</h4>
-<p style="font-size:11px;color:var(--tp);font-weight:600;letter-spacing:1px;text-transform:uppercase">CO-FOUNDER & COO</p>
-<p class="xs" style="margin-top:6px">Operations, content, growth. "If the format isn't convenient, nobody sticks with it."</p>
+<div class="card tc">
+<div style="font-size:36px;margin-bottom:8px">🗓️</div>
+<h4>2. We ship monthly</h4>
+<p class="sm">30 pouches delivered to your door. No reordering, no running out.</p>
 </div>
-<div class="card">
-<div class="ph" style="min-height:200px;margin-bottom:12px;border-radius:12px">[ Dawon photo ]</div>
-<h4>Dawon Kim</h4>
-<p style="font-size:11px;color:var(--tp);font-weight:600;letter-spacing:1px;text-transform:uppercase">CO-FOUNDER & CDO</p>
-<p class="xs" style="margin-top:6px">Design, video, everything visual. "It has to look as good as it works."</p>
-</div>
+<div class="card tc">
+<div style="font-size:36px;margin-bottom:8px">✨</div>
+<h4>3. Squeeze daily</h4>
+<p class="sm">5 seconds. Every day. Your gut builds its new baseline over weeks and months.</p>
 </div>
 </div>
 </div>
 </div>
 
-<!-- ====== THE SCIENCE ====== -->
+<div class="bg-w">
+<div class="s tc">
+<h3>What Gut Club members get</h3>
+<div class="g2" style="max-width:600px;margin:16px auto 0;text-align:left">
+<div class="card">
+<p style="font-size:14px"><strong style="color:var(--green)">✓</strong> 15% off every order</p>
+<p style="font-size:14px;margin-top:6px"><strong style="color:var(--green)">✓</strong> Free shipping always</p>
+<p style="font-size:14px;margin-top:6px"><strong style="color:var(--green)">✓</strong> Early access to new flavors</p>
+</div>
+<div class="card">
+<p style="font-size:14px"><strong style="color:var(--green)">✓</strong> Skip, pause, or cancel anytime</p>
+<p style="font-size:14px;margin-top:6px"><strong style="color:var(--green)">✓</strong> Swap flavors between deliveries</p>
+<p style="font-size:14px;margin-top:6px"><strong style="color:var(--green)">✓</strong> Priority customer support</p>
+</div>
+</div>
+<a class="btn btn-b" onclick="showPage('shop')" style="margin-top:24px">Join the Gut Club — $69/month →</a>
+<p style="font-size:11px;color:var(--light);margin-top:8px">Cancel anytime. No contracts. No guilt trips.</p>
+</div>
+</div>
+</div>
+
+<!-- ======================================== -->
+<!-- SCIENCE -->
+<!-- ======================================== -->
 <div class="page" id="science">
-<div class="spacer"></div>
-<div class="dark">
+<div class="spacer" style="height:92px"></div>
+<div class="bg-w">
 <div class="s narrow">
-<p class="tag">THE SCIENCE</p>
-<h2>We don't hide behind proprietary blends.</h2>
-<p class="lg" style="color:var(--light);margin-bottom:24px">Every ingredient. Every dose. Published. No guessing what's inside.</p>
+<p class="tag tag-tp">THE SCIENCE</p>
+<h1 style="font-size:36px">We don't hide behind<br>proprietary blends.</h1>
+<p class="lg" style="margin-bottom:28px">Every ingredient. Every dose. Published. No guessing what's inside.</p>
 
-<div style="background:var(--dark);border-radius:16px;padding:24px;margin-bottom:16px;border-left:3px solid var(--lime)">
-<h3 style="color:var(--lime)">Bacillus coagulans SNZ 1969</h3>
-<p class="sm">Our probiotic. Spore-forming — creates a protective shell that survives heat, shelf storage, and stomach acid. Reaches your gut alive. Then activates.</p>
-<p class="xs" style="margin-top:8px">4+ randomized, placebo-controlled trials published. 50+ years of safe human consumption. FDA GRAS (GRN 597, 864). Manufactured by Sanzyme Biologics.</p>
+<div class="card" style="border-left:3px solid var(--tp);margin-bottom:16px">
+<h3 style="color:var(--tp)">Bacillus coagulans SNZ 1969</h3>
+<p class="md">Our probiotic. Spore-forming — creates a protective shell that survives heat, shelf storage, and stomach acid. Reaches your gut alive. Then activates.</p>
+<p class="sm" style="margin-top:8px">4+ randomized, placebo-controlled trials. 50+ years of safe use. FDA GRAS (GRN 597, 864). Manufactured by Sanzyme Biologics.</p>
 <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
-<a href="https://pubmed.ncbi.nlm.nih.gov/34119240/" target="_blank" class="btn btn-o btn-s" style="font-size:10px;padding:6px 12px">PubMed: Constipation RCT →</a>
-<a href="https://pubmed.ncbi.nlm.nih.gov/41262831/" target="_blank" class="btn btn-o btn-s" style="font-size:10px;padding:6px 12px">PubMed: Immune Function RCT →</a>
-<a href="https://www.fda.gov/files/food/published/GRAS-Notice-000597---Bacillus-coagulans-SNZ1969-spores-preparation.pdf" target="_blank" class="btn btn-o btn-s" style="font-size:10px;padding:6px 12px">FDA GRAS Notice →</a>
+<a href="https://pubmed.ncbi.nlm.nih.gov/34119240/" target="_blank" class="btn btn-o btn-s" style="font-size:10px">PubMed: Constipation RCT →</a>
+<a href="https://pubmed.ncbi.nlm.nih.gov/41262831/" target="_blank" class="btn btn-o btn-s" style="font-size:10px">PubMed: Immune RCT →</a>
+<a href="https://www.fda.gov/files/food/published/GRAS-Notice-000597---Bacillus-coagulans-SNZ1969-spores-preparation.pdf" target="_blank" class="btn btn-o btn-s" style="font-size:10px">FDA GRAS Notice →</a>
 </div>
 </div>
 
-<div style="background:var(--dark);border-radius:16px;padding:24px;margin-bottom:16px">
-<h4 style="color:var(--white)">XOS (Xylo-oligosaccharides)</h4>
-<p class="sm">Prebiotic fiber. Feeds the good bacteria already in your gut. Derived from plant material.</p>
+<div class="card" style="margin-bottom:16px">
+<h4>XOS (Xylo-oligosaccharides)</h4>
+<p class="sm">Prebiotic fiber derived from plant material. Feeds the good bacteria already in your gut.</p>
 </div>
 
-<div style="background:var(--dark);border-radius:16px;padding:24px;margin-bottom:16px">
-<h4 style="color:var(--white)">Fibersol-2L</h4>
+<div class="card" style="margin-bottom:16px">
+<h4>Fibersol-2L</h4>
 <p class="sm">Soluble prebiotic fiber (resistant maltodextrin) by Matsutani/ADM. Clinically studied for digestive health. Liquid form designed for beverages.</p>
 </div>
 
-<div style="background:var(--dark);border-radius:16px;padding:24px">
-<h4 style="color:var(--lime)">Together: Synbiotic</h4>
-<p class="sm">Prebiotics + probiotics working in tandem. Most brands give you one. We give you both. The prebiotics feed the probiotics. The probiotics support your gut. Together they're more effective than either alone.</p>
+<div class="card" style="border-left:3px solid var(--lime)">
+<h4 style="color:var(--tp)">Together: Synbiotic</h4>
+<p class="sm">Prebiotics + probiotics working in tandem. The prebiotics feed the probiotics. The probiotics support your gut. Together they're more effective than either alone. That's what synbiotic means.</p>
+</div>
+
+<p style="margin-top:20px;font-size:12px;color:var(--light)">
+<strong>Full ingredient transparency:</strong> No proprietary blends. No hidden doses. Every ingredient and every dose is published on the label and on this page. If we can't show you, we don't use it.
+</p>
+</div>
+</div>
+</div>
+
+<!-- ======================================== -->
+<!-- OUR STORY -->
+<!-- ======================================== -->
+<div class="page" id="story">
+<div class="spacer" style="height:92px"></div>
+<div class="bg-w">
+<div class="s narrow tc">
+<p class="tag tag-b">OUR STORY</p>
+<h1 style="font-size:36px">We tried everything.<br>Nothing stuck.</h1>
+<p class="lg" style="margin-bottom:24px">Kombucha goes bad in the fridge. Powders need mixing. Pills get forgotten. We wanted gut health that fits real life — something you grab, squeeze, and move on with your day.</p>
+<p class="lg" style="color:var(--black)"><strong>So we built it.</strong> Three co-founders. One product. A spore-forming probiotic that actually survives your stomach, in a format you actually enjoy.</p>
+<p class="lg" style="color:var(--tp);margin-top:16px;font-weight:600">Pheeew is what happens when you stop overcomplicating gut health.</p>
+</div>
+</div>
+<div class="bg-f">
+<div class="s">
+<div class="g3 tc">
+<div class="card">
+<div class="ph" style="min-height:220px;border-radius:14px;margin-bottom:12px">[ Alex photo ]</div>
+<h4>Alex Kim</h4>
+<p style="font-size:11px;color:var(--tp);font-weight:600;letter-spacing:1px;text-transform:uppercase">CO-FOUNDER & CEO</p>
+<p class="sm" style="margin-top:6px">Brand, product, creative. "I wanted to make something I'd actually use every day."</p>
+</div>
+<div class="card">
+<div class="ph" style="min-height:220px;border-radius:14px;margin-bottom:12px">[ Jason photo ]</div>
+<h4>Jason Ko</h4>
+<p style="font-size:11px;color:var(--tp);font-weight:600;letter-spacing:1px;text-transform:uppercase">CO-FOUNDER & COO</p>
+<p class="sm" style="margin-top:6px">Operations, content, growth. "If the format isn't convenient, nobody sticks with it."</p>
+</div>
+<div class="card">
+<div class="ph" style="min-height:220px;border-radius:14px;margin-bottom:12px">[ Dawon photo ]</div>
+<h4>Dawon Kim</h4>
+<p style="font-size:11px;color:var(--tp);font-weight:600;letter-spacing:1px;text-transform:uppercase">CO-FOUNDER & CDO</p>
+<p class="sm" style="margin-top:6px">Design, video, everything visual. "It has to look as good as it works."</p>
+</div>
 </div>
 </div>
 </div>
 </div>
 
-<!-- ====== FAQ ====== -->
+<!-- ======================================== -->
+<!-- FAQ -->
+<!-- ======================================== -->
 <div class="page" id="faq">
-<div class="spacer"></div>
-<div class="wht">
+<div class="spacer" style="height:92px"></div>
+<div class="bg-w">
 <div class="s narrow">
-<p class="tag" style="color:var(--near)">FAQ</p>
+<p class="tag tag-b">FAQ</p>
 <h2>Questions? Answered.</h2>
-
-<div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q">What is a synbiotic?</div><div class="acc-a">A product with both prebiotics (food for good bacteria) and probiotics (live good bacteria). Most products have one or the other. Pheeew has both.</div></div>
-<div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q">What makes your probiotic different?</div><div class="acc-a">We use Bacillus coagulans SNZ 1969, a spore-forming strain. It creates a protective shell that survives heat, shelf storage, and stomach acid. Standard probiotics often don't survive the trip to your gut. Ours does. 4+ published clinical trials. 50+ years of safety data.</div></div>
+<div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q">What is a synbiotic?</div><div class="acc-a">A product with both prebiotics (food for good bacteria) and probiotics (live good bacteria). Most products have one or the other. Pheeew has both — that's what makes it a synbiotic.</div></div>
+<div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q">What makes your probiotic different?</div><div class="acc-a">We use Bacillus coagulans SNZ 1969, a spore-forming strain. It creates a protective shell that survives heat, shelf storage, and stomach acid. Standard probiotics often don't survive the trip to your gut. Ours does. 4+ published clinical trials. 50+ years of safety data. FDA GRAS.</div></div>
 <div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q">Do I need to refrigerate it?</div><div class="acc-a">No. Shelf-stable. Keep it in your bag, desk, car, gym bag. That's the whole point.</div></div>
 <div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q">How do I take it?</div><div class="acc-a">Squeeze the pouch. Drink it. Done. 100mL, about 5 seconds. No mixing, no blender, no water needed.</div></div>
 <div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q">What does it taste like?</div><div class="acc-a">Real fruit. Not "health food" taste. Tropical Punch (mango, tropical fruit, banana), Ginger Pear (ginger, apple, pear), Wild Berries (blueberry, elderberry, cranberry). We spent months on taste — it actually tastes good.</div></div>
-<div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q">Is it a supplement?</div><div class="acc-a">No. Pheeew is a conventional food, not a dietary supplement. We use a Nutrition Facts panel, not Supplement Facts. We're registered as a food product.</div></div>
+<div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q">Is it a supplement?</div><div class="acc-a">No. Pheeew is a conventional food, not a dietary supplement. We use a Nutrition Facts panel, not Supplement Facts.</div></div>
 <div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q">How often should I drink it?</div><div class="acc-a">One pouch per day. Daily consistency is how gut health works. Pick a time — morning, afternoon, whenever — and make it your routine.</div></div>
-<div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q">Can I cancel my subscription?</div><div class="acc-a">Anytime. No commitments. No fees. No guilt trips. Skip, pause, or cancel from your account dashboard. We'd rather earn your next order than trap you.</div></div>
+<div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q">Can I cancel my subscription?</div><div class="acc-a">Anytime. No commitments. No fees. No guilt trips. Skip, pause, or cancel from your account dashboard.</div></div>
 <div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q">Where is it made?</div><div class="acc-a">Manufactured in Korea by a certified facility (FDA-registered, HACCP-certified). Shipped to the US. Korean manufacturing = the same quality standard behind K-Beauty.</div></div>
 <div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q">What's the subscription price?</div><div class="acc-a">$69/month for 30 pouches ($2.30/pouch). One-time purchase: $79 ($2.63/pouch). Subscribers save 15% and get free shipping.</div></div>
 <div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q">What's in the prebiotic fiber?</div><div class="acc-a">XOS (xylo-oligosaccharides) + Fibersol-2L (resistant maltodextrin by Matsutani/ADM). Not inulin. Not chicory root fiber. We chose these specific fibers because they're clinically studied and gentle on the stomach.</div></div>
@@ -454,183 +665,116 @@ footer a:hover{color:var(--lime)}
 </div>
 </div>
 
-<!-- ====== LEGAL PAGES ====== -->
+<!-- ======================================== -->
+<!-- CONTACT -->
+<!-- ======================================== -->
+<div class="page" id="contact">
+<div class="spacer" style="height:92px"></div>
+<div class="bg-w">
+<div class="s narrow tc">
+<p class="tag tag-b">CONTACT</p>
+<h2>Get in touch.</h2>
+<div class="g3" style="margin:20px 0;text-align:center">
+<div class="card"><div style="font-size:28px;margin-bottom:8px">📧</div><h4>Email</h4><p class="sm">hello@pheeew.com</p></div>
+<div class="card"><div style="font-size:28px;margin-bottom:8px">📱</div><h4>Social</h4><p class="sm">@drinkpheeew</p></div>
+<div class="card"><div style="font-size:28px;margin-bottom:8px">🕐</div><h4>Response time</h4><p class="sm">Within 24 hours</p></div>
+</div>
+<p class="sm">For wholesale, retail, or partnership inquiries: <strong>hello@pheeew.com</strong></p>
+</div>
+</div>
+</div>
+
+<!-- ======================================== -->
+<!-- LEGAL PAGES -->
+<!-- ======================================== -->
 <div class="page" id="privacy">
-<div class="spacer"></div>
-<div class="wht">
+<div class="spacer" style="height:92px"></div>
+<div class="bg-w">
 <div class="legal-page">
 <h1>Privacy Policy</h1>
 <p class="date">Effective Date: [Launch Date], 2026</p>
-
-<p>This Privacy Policy describes how Pheeew, Inc. ("Pheeew," "we," "us," or "our") collects, uses, and shares your personal information when you visit www.pheeew.com (the "Site") or make a purchase from us.</p>
-
+<p>This Privacy Policy describes how Pheeew, Inc. ("Pheeew," "we," "us") collects, uses, and shares your personal information when you visit www.pheeew.com or make a purchase.</p>
 <h2>Information We Collect</h2>
-<p><strong>Personal information you provide:</strong> When you make a purchase or sign up for our email list, we collect your name, email address, shipping address, payment information, and phone number (if provided).</p>
-<p><strong>Information collected automatically:</strong> When you visit the Site, we automatically collect device information (browser type, IP address, operating system), usage data (pages visited, time on site, referring URL), and cookie data.</p>
-<p><strong>Order information:</strong> When you make a purchase, we collect your order details, billing address, shipping address, payment method, and email address.</p>
-
+<p><strong>Personal information you provide:</strong> Name, email, shipping address, payment information, phone number.</p>
+<p><strong>Automatically collected:</strong> Device info, usage data, cookies.</p>
 <h2>How We Use Your Information</h2>
-<ul>
-<li>To fulfill and manage your orders, including shipping, returns, and customer support</li>
-<li>To communicate with you about your orders, subscriptions, and account</li>
-<li>To send marketing emails (with your consent) — you can unsubscribe anytime</li>
-<li>To improve our Site, products, and customer experience</li>
-<li>To comply with legal obligations</li>
-</ul>
-
+<ul><li>Fulfill and manage orders</li><li>Communicate about orders and subscriptions</li><li>Send marketing emails (with consent)</li><li>Improve our products and experience</li><li>Comply with legal obligations</li></ul>
 <h2>Third-Party Services</h2>
-<p>We use the following third-party services that may collect your data:</p>
-<ul>
-<li><strong>Shopify</strong> — e-commerce platform (<a href="https://www.shopify.com/legal/privacy" target="_blank">Shopify Privacy Policy</a>)</li>
-<li><strong>Klaviyo</strong> — email marketing (<a href="https://www.klaviyo.com/legal/privacy" target="_blank">Klaviyo Privacy Policy</a>)</li>
-<li><strong>Recharge</strong> — subscription management</li>
-<li><strong>Google Analytics</strong> — website analytics</li>
-<li><strong>Meta Pixel</strong> — advertising optimization</li>
-<li><strong>Stripe</strong> — payment processing (<a href="https://stripe.com/privacy" target="_blank">Stripe Privacy Policy</a>)</li>
-</ul>
-<p>We do not sell your personal information to third parties.</p>
-
-<h2>Cookies</h2>
-<p>We use cookies to remember your preferences, understand how you use our Site, and serve relevant ads. You can control cookies through your browser settings.</p>
-
+<p>We use: Shopify (e-commerce), Klaviyo (email), Recharge (subscriptions), Google Analytics, Meta Pixel, Stripe (payments). We do not sell your personal information.</p>
 <h2>Your Rights</h2>
-<p>Depending on your location, you may have the right to access, correct, or delete your personal data. California residents: see CCPA section below. To exercise your rights, contact us at <a href="mailto:hello@pheeew.com">hello@pheeew.com</a>.</p>
-
-<h2>CCPA (California Residents)</h2>
-<p>If you are a California resident, you have the right to know what personal information we collect, request deletion of your data, and opt out of the sale of personal information. We do not sell personal information. To make a request, email <a href="mailto:hello@pheeew.com">hello@pheeew.com</a>.</p>
-
-<h2>Data Retention</h2>
-<p>We retain your personal information for as long as you have an account with us or as needed to provide services, comply with legal obligations, resolve disputes, and enforce agreements.</p>
-
-<h2>Changes to This Policy</h2>
-<p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date.</p>
-
-<h2>Contact Us</h2>
-<p>Pheeew, Inc.<br>1111b South Governors Ave STE 98188<br>Dover, DE 19904<br>Email: <a href="mailto:hello@pheeew.com">hello@pheeew.com</a><br>Phone: (302) 240-1056</p>
+<p>You may access, correct, or delete your personal data. California residents: see CCPA section. Contact: <a href="mailto:hello@pheeew.com">hello@pheeew.com</a></p>
+<h2>CCPA (California)</h2>
+<p>We do not sell personal information. To make a data request: <a href="mailto:hello@pheeew.com">hello@pheeew.com</a></p>
+<h2>Contact</h2>
+<p>Pheeew, Inc. · 1111b South Governors Ave STE 98188, Dover, DE 19904 · hello@pheeew.com · (302) 240-1056</p>
 </div>
 </div>
 </div>
 
 <div class="page" id="terms">
-<div class="spacer"></div>
-<div class="wht">
+<div class="spacer" style="height:92px"></div>
+<div class="bg-w">
 <div class="legal-page">
 <h1>Terms of Service</h1>
 <p class="date">Effective Date: [Launch Date], 2026</p>
-
-<h2>Overview</h2>
-<p>This website is operated by Pheeew, Inc. ("Pheeew," "we," "us"). By accessing our website and/or purchasing our products, you agree to these Terms of Service. Please read them carefully.</p>
-
-<h2>Online Store Terms</h2>
-<p>By using this site, you represent that you are at least 18 years old or have the consent of a legal guardian. You may not use our products for any illegal or unauthorized purpose. You must not transmit any worms, viruses, or destructive code.</p>
-
-<h2>Products and Services</h2>
-<p>Pheeew products are conventional food products (not dietary supplements). We have made every effort to display product colors and descriptions accurately, but we cannot guarantee that your device's display will be accurate. We reserve the right to limit quantities and to discontinue any product at any time.</p>
-
-<h2>Pricing</h2>
-<p>Prices are subject to change without notice. We are not liable for typographical errors in pricing. If a product is listed at an incorrect price, we reserve the right to cancel orders placed at that price.</p>
-
-<h2>Subscriptions</h2>
-<p>When you subscribe, you authorize us to charge your payment method on a recurring basis (monthly unless otherwise specified). You may cancel, skip, or pause your subscription at any time through your account dashboard or by contacting us. Cancellation takes effect at the end of the current billing period.</p>
-
-<h2>Accuracy of Information</h2>
-<p>We are not responsible if information on this site is not accurate, complete, or current. The material on this site is provided for general information only and should not be relied upon as the sole basis for making decisions. Consult a healthcare professional before starting any new dietary regimen.</p>
-
+<p>By using this site, you agree to these Terms. Pheeew products are conventional food products (not dietary supplements). Prices are subject to change. Subscriptions auto-renew monthly; cancel anytime via your account dashboard.</p>
 <h2>Health Disclaimer</h2>
-<p>Pheeew products are conventional food products. They are not intended to diagnose, treat, cure, or prevent any disease. The information on this website is for educational purposes only and is not a substitute for professional medical advice. Always consult your physician or qualified health provider with questions about a medical condition.</p>
-
-<h2>Limitation of Liability</h2>
-<p>To the fullest extent permitted by law, Pheeew, Inc. shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our products or website.</p>
-
+<p>Pheeew products are not intended to diagnose, treat, cure, or prevent any disease. Consult your physician before starting any new dietary regimen.</p>
 <h2>Governing Law</h2>
-<p>These Terms shall be governed by the laws of the State of Delaware without regard to its conflict of law provisions.</p>
-
-<h2>Changes to Terms</h2>
-<p>We reserve the right to update these Terms of Service at any time. Changes are effective upon posting.</p>
-
+<p>These Terms are governed by Delaware law.</p>
 <h2>Contact</h2>
-<p>Pheeew, Inc.<br>1111b South Governors Ave STE 98188<br>Dover, DE 19904<br>Email: <a href="mailto:hello@pheeew.com">hello@pheeew.com</a></p>
+<p>Pheeew, Inc. · hello@pheeew.com</p>
 </div>
 </div>
 </div>
 
 <div class="page" id="shipping">
-<div class="spacer"></div>
-<div class="wht">
+<div class="spacer" style="height:92px"></div>
+<div class="bg-w">
 <div class="legal-page">
 <h1>Shipping Policy</h1>
 <p class="date">Effective Date: [Launch Date], 2026</p>
-
-<h2>Processing Time</h2>
-<p>Orders are processed within 1-3 business days. You will receive a confirmation email with tracking information once your order ships.</p>
-
-<h2>Shipping Rates</h2>
-<ul>
-<li><strong>Subscribers:</strong> Free standard shipping on all subscription orders</li>
-<li><strong>One-time purchases:</strong> Standard shipping rates calculated at checkout (typically $5-8 depending on location)</li>
-</ul>
-
-<h2>Delivery Time</h2>
-<ul>
-<li><strong>Standard shipping:</strong> 5-8 business days (contiguous US)</li>
-<li><strong>We do not currently ship to:</strong> Alaska, Hawaii, US territories, or international addresses</li>
-</ul>
-
-<h2>Tracking</h2>
-<p>A tracking number will be emailed to you once your order ships. If you have not received tracking information within 3 business days of ordering, please contact us.</p>
-
-<h2>Lost or Damaged Packages</h2>
-<p>If your package is lost or arrives damaged, please contact us within 7 days at <a href="mailto:hello@pheeew.com">hello@pheeew.com</a> and we will make it right.</p>
-
-<h2>Contact</h2>
-<p>Email: <a href="mailto:hello@pheeew.com">hello@pheeew.com</a></p>
+<p><strong>Processing:</strong> 1-3 business days. <strong>Subscribers:</strong> Free standard shipping. <strong>One-time:</strong> $5-8 standard shipping. <strong>Delivery:</strong> 5-8 business days (contiguous US). We do not currently ship to AK, HI, territories, or internationally.</p>
+<p>Lost or damaged? Contact <a href="mailto:hello@pheeew.com">hello@pheeew.com</a> within 7 days.</p>
 </div>
 </div>
 </div>
 
 <div class="page" id="refund">
-<div class="spacer"></div>
-<div class="wht">
+<div class="spacer" style="height:92px"></div>
+<div class="bg-w">
 <div class="legal-page">
 <h1>Refund Policy</h1>
 <p class="date">Effective Date: [Launch Date], 2026</p>
-
-<h2>Satisfaction Guarantee</h2>
-<p>We want you to love Pheeew. If you're not satisfied with your first order, contact us within 30 days of delivery and we'll make it right.</p>
-
-<h2>How to Request a Refund</h2>
-<p>Email us at <a href="mailto:hello@pheeew.com">hello@pheeew.com</a> with your order number and reason for the request. We'll respond within 2 business days.</p>
-
-<h2>Refund Conditions</h2>
-<ul>
-<li><strong>First order:</strong> Full refund within 30 days of delivery. No questions asked.</li>
-<li><strong>Subsequent orders:</strong> Refunds considered on a case-by-case basis for product quality issues.</li>
-<li><strong>Subscriptions:</strong> Cancel anytime. No refunds for the current billing period, but your subscription will not renew.</li>
-<li><strong>Damaged products:</strong> Full replacement or refund for any products damaged during shipping.</li>
-</ul>
-
-<h2>Refund Processing</h2>
-<p>Approved refunds are processed within 5-7 business days to your original payment method.</p>
-
-<h2>Exchanges</h2>
-<p>We do not process exchanges at this time. If you'd like a different flavor, cancel your current order and place a new one.</p>
-
-<h2>Contact</h2>
-<p>Email: <a href="mailto:hello@pheeew.com">hello@pheeew.com</a></p>
+<p><strong>First order:</strong> Full refund within 30 days. No questions asked. <strong>Subsequent orders:</strong> Case-by-case for quality issues. <strong>Subscriptions:</strong> Cancel anytime; no refund for current period. <strong>Damaged products:</strong> Full replacement or refund.</p>
+<p>Email <a href="mailto:hello@pheeew.com">hello@pheeew.com</a> with your order number.</p>
 </div>
 </div>
 </div>
 
-<!-- ====== FOOTER ====== -->
+<div class="page" id="accessibility">
+<div class="spacer" style="height:92px"></div>
+<div class="bg-w">
+<div class="legal-page">
+<h1>Accessibility Statement</h1>
+<p class="date">Effective Date: [Launch Date], 2026</p>
+<p>Pheeew, Inc. is committed to making our website accessible to all users. We follow WCAG 2.1 Level AA guidelines. If you experience any difficulty accessing our site, please contact us at <a href="mailto:hello@pheeew.com">hello@pheeew.com</a> and we will work to provide the information you need.</p>
+</div>
+</div>
+</div>
+
+<!-- ======================================== -->
+<!-- FOOTER -->
+<!-- ======================================== -->
 <footer>
 <div class="footer-wrap">
 <div class="footer-grid">
 <div>
-<div class="logo" style="margin-bottom:10px" onclick="showPage('home')">Pheeew.</div>
-<p style="font-size:13px;color:var(--light);line-height:1.7;max-width:280px">The Synbiotic Squeeze.™ Pre + probiotic in one squeeze. Spore-forming. Shelf-stable. Made for real life.</p>
-<div style="margin-top:12px">
-<div class="email-row" style="max-width:280px;margin:0">
-<input type="email" placeholder="Your email" style="font-size:12px;padding:10px 14px">
+<div class="logo" style="margin-bottom:12px;color:var(--white)" onclick="showPage('home')">Pheeew<span style="color:var(--lime)">.</span></div>
+<p style="font-size:13px;color:var(--light);line-height:1.7;max-width:260px">The Synbiotic Squeeze.™ Pre + probiotic in one squeeze. Spore-forming. Shelf-stable. Made for real life.</p>
+<div style="margin-top:14px">
+<div class="email-row" style="max-width:260px;margin:0;border-color:rgba(255,255,255,.15)">
+<input type="email" placeholder="Your email" style="font-size:12px;padding:10px 14px;color:var(--white)">
 <button style="font-size:11px;padding:10px 14px">Join →</button>
 </div>
 </div>
@@ -639,13 +783,14 @@ footer a:hover{color:var(--lime)}
 <h4>Shop</h4>
 <a onclick="showPage('shop')">All Products</a>
 <a onclick="showPage('shop')">Subscribe & Save</a>
-<a onclick="showPage('shop')">One-Time Purchase</a>
+<a onclick="showPage('gut-club')">The Gut Club</a>
 </div>
 <div>
 <h4>Learn</h4>
 <a onclick="showPage('science')">The Science</a>
 <a onclick="showPage('story')">Our Story</a>
 <a onclick="showPage('faq')">FAQ</a>
+<a onclick="showPage('contact')">Contact</a>
 </div>
 <div>
 <h4>Legal</h4>
@@ -653,19 +798,21 @@ footer a:hover{color:var(--lime)}
 <a onclick="showPage('terms')">Terms of Service</a>
 <a onclick="showPage('shipping')">Shipping Policy</a>
 <a onclick="showPage('refund')">Refund Policy</a>
+<a onclick="showPage('accessibility')">Accessibility</a>
 </div>
 </div>
 <div class="footer-bottom">
-<p>&copy; 2026 Pheeew, Inc. All rights reserved. Delaware C-Corp.</p>
+<p>© 2026 Pheeew, Inc. All rights reserved.</p>
+<p style="font-size:10px;color:#444;max-width:500px">Pheeew products are conventional food products. They are not intended to diagnose, treat, cure, or prevent any disease. Consult your physician before starting any new dietary regimen.</p>
 <p>@drinkpheeew · hello@pheeew.com</p>
 </div>
 </div>
 </footer>
 
-<!-- ====== STICKY BAR ====== -->
+<!-- STICKY BAR -->
 <div class="sbar" id="stickyBar">
-<div class="sbar-price">$69<span>/month · 30 pouches</span></div>
-<a class="btn btn-l btn-s" onclick="showPage('shop')">Subscribe & Save 15% →</a>
+<span style="font-family:'Poppins',sans-serif;font-size:15px;font-weight:700">$69<span style="font-size:12px;color:var(--mid);font-weight:400">/month · 30 pouches</span></span>
+<a class="btn btn-b btn-s" onclick="showPage('shop')">Subscribe & Save 15% →</a>
 </div>
 
 <script>
@@ -678,11 +825,9 @@ if(a.getAttribute('onclick')&&a.getAttribute('onclick').includes("'"+id+"'"))a.c
 });
 window.scrollTo(0,0);
 }
-// Sticky bar on scroll
 window.addEventListener('scroll',function(){
 var bar=document.getElementById('stickyBar');
-if(window.scrollY>600)bar.classList.add('show');
-else bar.classList.remove('show');
+if(window.scrollY>800)bar.classList.add('show');else bar.classList.remove('show');
 });
 </script>
 
