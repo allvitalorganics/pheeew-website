@@ -228,13 +228,10 @@ nav{padding:0 16px}
 <div class="logo" onclick="showPage('home')">Pheeew<span>.</span></div>
 <div class="nav-links" id="navLinks">
 <a onclick="showPage('home')" class="on">Home</a>
-<a onclick="showPage('products')">Products</a>
 <a onclick="showPage('science')">Science</a>
+<a onclick="showPage('shop')">Shop</a>
 <a onclick="showPage('about')">About</a>
 <a onclick="showPage('faq')">FAQ</a>
-<a onclick="showPage('shop')">Shop</a>
-<a onclick="showPage('preorder')">Preorder</a>
-<a onclick="showPage('reviews')">Reviews</a>
 <a onclick="showPage('ambassadors')">Ambassadors</a>
 <a onclick="showPage('contact')">Contact</a>
 </div>
@@ -261,7 +258,7 @@ nav{padding:0 16px}
 <p class="lg" style="max-width:540px;margin:0 auto 32px">The first true synbiotic smoothie. Live probiotics + prebiotic fiber + vitamins — in one pouch that actually tastes incredible.</p>
 <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
 <a class="btn btn-lime" onclick="showPage('preorder')">Join the Waitlist &rarr;</a>
-<a class="btn btn-o" onclick="showPage('products')">See the Flavors</a>
+<a class="btn btn-o" onclick="showPage('shop')">See the Flavors</a>
 </div>
 <p style="font-size:12px;color:var(--light);margin-top:14px">$4.50/pouch &middot; $89/mo subscription &middot; Cancel anytime</p>
 
@@ -296,7 +293,7 @@ nav{padding:0 16px}
 <p class="md" style="max-width:500px;margin:0 auto 40px">Every pouch packs a spore-forming probiotic, prebiotic fiber, vitamins, and real fruit puree. Pick your function. Squeeze. Thrive.</p>
 <div class="g3">
 <!-- Tropical Punch -->
-<div class="sku-card tp" onclick="showPage('products')">
+<div class="sku-card tp" onclick="showPage('shop')">
 <p class="sku-func" style="color:var(--tp)">GUT + DIGESTION</p>
 <p class="sku-name">Tropical Punch</p>
 <p class="sku-flavor">Mango &middot; Pineapple &middot; Passion Fruit</p>
@@ -305,7 +302,7 @@ nav{padding:0 16px}
 <p class="sku-price"><strong>$4.50</strong>/pouch &middot; $89/mo</p>
 </div>
 <!-- Ginger Pear -->
-<div class="sku-card gp" onclick="showPage('products')">
+<div class="sku-card gp" onclick="showPage('shop')">
 <p class="sku-func" style="color:var(--gp)">GUT + IMMUNITY</p>
 <p class="sku-name">Ginger Pear</p>
 <p class="sku-flavor">Pear &middot; Ginger &middot; Lemon &middot; Turmeric</p>
@@ -314,7 +311,7 @@ nav{padding:0 16px}
 <p class="sku-price"><strong>$4.50</strong>/pouch &middot; $89/mo</p>
 </div>
 <!-- Wild Berries -->
-<div class="sku-card wb" onclick="showPage('products')">
+<div class="sku-card wb" onclick="showPage('shop')">
 <p class="sku-func" style="color:var(--wb)">GUT + ENERGY</p>
 <p class="sku-name">Wild Berries</p>
 <p class="sku-flavor">Blueberry &middot; Acai &middot; Raspberry</p>
@@ -371,7 +368,7 @@ nav{padding:0 16px}
 <div style="font-size:36px;margin-bottom:12px">&#x1F33E;</div>
 <h4 style="color:var(--gp)">Prebiotic Fiber</h4>
 <p class="sm"><strong style="color:var(--white)">XOS + Fibersol-2L.</strong> Two clinically studied prebiotic fibers that selectively feed beneficial bacteria in your gut. They're the fuel your probiotics need to thrive &mdash; not just survive.</p>
-<p style="font-size:9px;color:var(--light);margin-top:8px">Source: <a href="https://www.hfpappexternal.fda.gov/scripts/fdcc/index.cfm?set=GRASNotices&id=864" target="_blank" style="color:var(--light);text-decoration:underline">FDA GRN 864</a></p>
+<p style="font-size:9px;color:var(--light);margin-top:8px">Sources: <a href="https://pubmed.ncbi.nlm.nih.gov/24661576/" target="_blank" style="color:var(--light);text-decoration:underline">Childs et al., 2014 (XOS bifidogenesis)</a> &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/39664910/" target="_blank" style="color:var(--light);text-decoration:underline">Niu et al., 2024 (XOS synbiotic)</a> &middot; <a href="https://www.hfpappexternal.fda.gov/scripts/fdcc/index.cfm?set=GRASNotices&id=343" target="_blank" style="color:var(--light);text-decoration:underline">FDA GRN 343 (XOS)</a> &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/18689571/" target="_blank" style="color:var(--light);text-decoration:underline">Fastinger et al., 2008 (Fibersol-2)</a> &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/36121843/" target="_blank" style="color:var(--light);text-decoration:underline">Shahid et al., 2022 (Fibersol-2)</a></p>
 </div>
 <div class="card tc" style="border-top:3px solid var(--tp)">
 <div style="font-size:36px;margin-bottom:12px">&#x1F504;</div>
@@ -399,164 +396,7 @@ nav{padding:0 16px}
 </div><!-- /home -->
 
 
-<!-- ================================================================ -->
-<!-- PAGE 2: PRODUCTS                                                 -->
-<!-- ================================================================ -->
-<div class="page" id="products">
-<div class="spacer"></div>
-
-<div class="bg-black">
-<div class="s tc">
-<p class="tag tag-lime">THE SYNBIOTIC SMOOTHIE&trade;</p>
-<h2>Pick your function.<br>Squeeze. <span style="color:var(--lime)">Thrive.</span></h2>
-<p class="md" style="max-width:520px;margin:0 auto 16px">Every pouch is a real fruit puree packed with a clinically studied spore-forming probiotic, prebiotic fiber, and targeted vitamins. This isn't a supplement &mdash; it's conventional food that works.</p>
-</div>
-</div>
-
-<!-- TROPICAL PUNCH -->
-<div class="bg-tp">
-<div class="s">
-<div class="g2" style="gap:48px;align-items:center">
-<div style="background:linear-gradient(135deg,#FF9966,#FF6B35);border-radius:24px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;min-height:320px">
-<p style="color:rgba(255,255,255,.5);font-size:13px;font-weight:600">[ TROPICAL PUNCH PRODUCT PHOTO ]</p>
-</div>
-<div>
-<p class="tag tag-tp">GUT + DIGESTION</p>
-<h2 style="color:var(--tp)">Tropical Punch</h2>
-<p class="md" style="margin-bottom:20px">A tropical fruit smoothie that supports healthy digestion. Mango, pineapple, and passion fruit puree blended with prebiotics that feed your good bacteria and a spore-forming probiotic that actually gets there alive.</p>
-<h4 style="color:var(--white);margin-bottom:12px">Key Ingredients</h4>
-<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px">
-<span class="ing-pill">Bacillus coagulans SNZ 1969</span>
-<span class="ing-pill">XOS (Prebiotic)</span>
-<span class="ing-pill">Fibersol-2L (Prebiotic)</span>
-<span class="ing-pill">Vitamin C</span>
-<span class="ing-pill">Mango Puree</span>
-<span class="ing-pill">Pineapple Puree</span>
-<span class="ing-pill">Passion Fruit Puree</span>
-</div>
-<h4 style="color:var(--white);margin-bottom:8px">Benefits</h4>
-<ul style="padding-left:18px;margin-bottom:20px">
-<li class="sm" style="color:var(--mid)">Supports healthy digestion and regularity</li>
-<li class="sm" style="color:var(--mid)">Feeds beneficial gut bacteria with prebiotic fiber</li>
-<li class="sm" style="color:var(--mid)">Delivers live probiotics to the gut</li>
-<li class="sm" style="color:var(--mid)">Vitamin C for antioxidant support</li>
-</ul>
-<p style="font-size:9px;color:var(--light);margin-bottom:12px;line-height:1.5">Sources: Probiotic strain &mdash; <a href="https://www.hfpappexternal.fda.gov/scripts/fdcc/index.cfm?set=GRASNotices&id=597" target="_blank" style="color:var(--light);text-decoration:underline">FDA GRN 597</a>. Vitamin C immune/antioxidant support &mdash; <a href="https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional" target="_blank" style="color:var(--light);text-decoration:underline">NIH ODS</a>.</p>
-<p class="md"><strong style="color:var(--white);font-size:18px">$4.50</strong>/pouch one-time &nbsp;|&nbsp; <strong style="color:var(--tp);font-size:18px">$2.97</strong>/pouch with subscription</p>
-<a class="btn btn-tp btn-s" onclick="showPage('shop')" style="margin-top:16px">Subscribe & Save &rarr;</a>
-</div>
-</div>
-</div>
-</div>
-
-<!-- GINGER PEAR -->
-<div class="bg-gp">
-<div class="s">
-<div class="g2" style="gap:48px;align-items:center">
-<div>
-<p class="tag tag-gp">GUT + IMMUNITY</p>
-<h2 style="color:var(--gp)">Ginger Pear</h2>
-<p class="md" style="margin-bottom:20px">A warm, spiced smoothie that supports your immune system daily. Pear and ginger puree with a Vitamin C boost, prebiotics, and a live spore-forming probiotic. Cozy and powerful.</p>
-<h4 style="color:var(--white);margin-bottom:12px">Key Ingredients</h4>
-<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px">
-<span class="ing-pill">Bacillus coagulans SNZ 1969</span>
-<span class="ing-pill">XOS (Prebiotic)</span>
-<span class="ing-pill">Fibersol-2L (Prebiotic)</span>
-<span class="ing-pill">Vitamin C (High Dose)</span>
-<span class="ing-pill">Pear Puree</span>
-<span class="ing-pill">Ginger Extract</span>
-<span class="ing-pill">Lemon Juice</span>
-</div>
-<h4 style="color:var(--white);margin-bottom:8px">Benefits</h4>
-<ul style="padding-left:18px;margin-bottom:20px">
-<li class="sm" style="color:var(--mid)">High-dose Vitamin C for immune support</li>
-<li class="sm" style="color:var(--mid)">Ginger soothes the digestive tract</li>
-<li class="sm" style="color:var(--mid)">Prebiotics + probiotics working together</li>
-<li class="sm" style="color:var(--mid)">Anti-inflammatory support</li>
-</ul>
-<p style="font-size:9px;color:var(--light);margin-bottom:12px;line-height:1.5">Sources: Probiotic strain &mdash; <a href="https://www.hfpappexternal.fda.gov/scripts/fdcc/index.cfm?set=GRASNotices&id=597" target="_blank" style="color:var(--light);text-decoration:underline">FDA GRN 597</a>. Vitamin C immune support &mdash; <a href="https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional" target="_blank" style="color:var(--light);text-decoration:underline">NIH ODS</a>. Immune function study &mdash; <a href="https://pubmed.ncbi.nlm.nih.gov/41262831/" target="_blank" style="color:var(--light);text-decoration:underline">PubMed 41262831</a>.</p>
-<p class="md"><strong style="color:var(--white);font-size:18px">$4.50</strong>/pouch one-time &nbsp;|&nbsp; <strong style="color:var(--gp);font-size:18px">$2.97</strong>/pouch with subscription</p>
-<a class="btn btn-s" onclick="showPage('shop')" style="background:var(--gp);color:var(--black);margin-top:16px">Subscribe & Save &rarr;</a>
-</div>
-<div style="background:linear-gradient(135deg,#F0D860,#C8A832);border-radius:24px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;min-height:320px">
-<p style="color:rgba(100,80,20,.4);font-size:13px;font-weight:600">[ GINGER PEAR PRODUCT PHOTO ]</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- WILD BERRIES -->
-<div class="bg-wb">
-<div class="s">
-<div class="g2" style="gap:48px;align-items:center">
-<div style="background:linear-gradient(135deg,#CE93D8,#8B45A6);border-radius:24px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;min-height:320px">
-<p style="color:rgba(255,255,255,.4);font-size:13px;font-weight:600">[ WILD BERRIES PRODUCT PHOTO ]</p>
-</div>
-<div>
-<p class="tag tag-wb">GUT + ENERGY</p>
-<h2 style="color:var(--wb)">Wild Berries</h2>
-<p class="md" style="margin-bottom:20px">A berry-packed smoothie for clean, sustained energy. Blueberry, acai, and raspberry puree with natural caffeine from green tea extract, B vitamins, and the full synbiotic stack. No crash. No jitters.</p>
-<h4 style="color:var(--white);margin-bottom:12px">Key Ingredients</h4>
-<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px">
-<span class="ing-pill">Bacillus coagulans SNZ 1969</span>
-<span class="ing-pill">XOS (Prebiotic)</span>
-<span class="ing-pill">Fibersol-2L (Prebiotic)</span>
-<span class="ing-pill">Green Tea Extract</span>
-<span class="ing-pill">B Vitamins (B6, B12)</span>
-<span class="ing-pill">Blueberry Puree</span>
-<span class="ing-pill">Acai Puree</span>
-<span class="ing-pill">Raspberry Puree</span>
-</div>
-<h4 style="color:var(--white);margin-bottom:8px">Benefits</h4>
-<ul style="padding-left:18px;margin-bottom:20px">
-<li class="sm" style="color:var(--mid)">Natural caffeine from green tea extract (no crash)</li>
-<li class="sm" style="color:var(--mid)">B vitamins for energy metabolism</li>
-<li class="sm" style="color:var(--mid)">Antioxidant-rich berry blend</li>
-<li class="sm" style="color:var(--mid)">Full synbiotic stack for gut health</li>
-</ul>
-<p style="font-size:9px;color:var(--light);margin-bottom:12px;line-height:1.5">Sources: Probiotic strain &mdash; <a href="https://www.hfpappexternal.fda.gov/scripts/fdcc/index.cfm?set=GRASNotices&id=597" target="_blank" style="color:var(--light);text-decoration:underline">FDA GRN 597</a>. B vitamins &amp; energy metabolism &mdash; <a href="https://ods.od.nih.gov/factsheets/VitaminB6-HealthProfessional" target="_blank" style="color:var(--light);text-decoration:underline">NIH ODS</a>. Green tea extract caffeine safety &mdash; <a href="https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2015.4102" target="_blank" style="color:var(--light);text-decoration:underline">EFSA Scientific Opinion</a>.</p>
-<p class="md"><strong style="color:var(--white);font-size:18px">$4.50</strong>/pouch one-time &nbsp;|&nbsp; <strong style="color:var(--wb);font-size:18px">$2.97</strong>/pouch with subscription</p>
-<a class="btn btn-s" onclick="showPage('shop')" style="background:var(--wb);color:var(--white);margin-top:16px">Subscribe & Save &rarr;</a>
-</div>
-</div>
-</div>
-</div>
-
-<!-- WHAT'S IN EVERY POUCH -->
-<div class="bg-near">
-<div class="s tc">
-<p class="tag tag-lime">WHAT'S IN EVERY POUCH</p>
-<h2>Real ingredients. No fillers. No BS.</h2>
-<p class="md" style="max-width:480px;margin:0 auto 40px">Pheeew is classified as conventional food &mdash; not a supplement. That means higher manufacturing standards, better taste, and full transparency.</p>
-<div class="g4">
-<div class="card tc">
-<div class="ci">&#x1F9EC;</div>
-<h4 style="color:var(--white)">Bacillus coagulans<br>SNZ 1969</h4>
-<p class="sm">Spore-forming probiotic. 50+ years of safe use. Survives stomach acid.</p>
-<p style="font-size:9px;color:var(--light);margin-top:6px"><a href="https://www.hfpappexternal.fda.gov/scripts/fdcc/index.cfm?set=GRASNotices&id=597" target="_blank" style="color:var(--light);text-decoration:underline">FDA GRN 597</a> &middot; <a href="https://www.sanzymebiologics.com/bacillus-coagulans" target="_blank" style="color:var(--light);text-decoration:underline">Sanzyme Biologics</a></p>
-</div>
-<div class="card tc">
-<div class="ci">&#x1F33E;</div>
-<h4 style="color:var(--white)">XOS + Fibersol-2L</h4>
-<p class="sm">Prebiotic fiber duo that feeds your good bacteria. Clinically studied.</p>
-</div>
-<div class="card tc">
-<div class="ci">&#x1F34A;</div>
-<h4 style="color:var(--white)">Vitamin C</h4>
-<p class="sm">Immune support and antioxidant protection in every pouch.</p>
-<p style="font-size:9px;color:var(--light);margin-top:6px"><a href="https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional" target="_blank" style="color:var(--light);text-decoration:underline">NIH Office of Dietary Supplements</a></p>
-</div>
-<div class="card tc">
-<div class="ci">&#x26A1;</div>
-<h4 style="color:var(--white)">B Vitamins +<br>Green Tea Extract</h4>
-<p class="sm">Natural energy support (in Gut + Energy). Clean caffeine, no crash.</p>
-<p style="font-size:9px;color:var(--light);margin-top:6px"><a href="https://ods.od.nih.gov/factsheets/VitaminB6-HealthProfessional" target="_blank" style="color:var(--light);text-decoration:underline">NIH ODS (B Vitamins)</a> &middot; <a href="https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2015.4102" target="_blank" style="color:var(--light);text-decoration:underline">EFSA caffeine safety</a></p>
-</div>
-</div>
-</div>
-</div>
-
-</div><!-- /products -->
+<!-- Products page removed: merged into Shop -->
 
 
 <!-- ================================================================ -->
@@ -725,9 +565,17 @@ nav{padding:0 16px}
 <h4 style="color:var(--lime);font-size:12px;margin-bottom:6px">B Vitamins &mdash; Energy Metabolism</h4>
 <p class="sm" style="line-height:1.6">&bull; NIH Office of Dietary Supplements: <a href="https://ods.od.nih.gov/factsheets/VitaminB6-HealthProfessional" target="_blank" style="color:var(--light);text-decoration:underline">Vitamin B6 &mdash; Health Professional Fact Sheet</a></p>
 </div>
-<div>
+<div style="border-bottom:1px solid var(--border);padding-bottom:14px">
 <h4 style="color:var(--lime);font-size:12px;margin-bottom:6px">Green Tea Extract &mdash; Caffeine Safety</h4>
 <p class="sm" style="line-height:1.6">&bull; EFSA Scientific Opinion on caffeine safety: <a href="https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2015.4102" target="_blank" style="color:var(--light);text-decoration:underline">EFSA Journal 2015;13(5):4102</a></p>
+</div>
+<div>
+<h4 style="color:var(--lime);font-size:12px;margin-bottom:6px">Prebiotic Fiber &mdash; XOS &amp; Fibersol-2L</h4>
+<p class="sm" style="line-height:1.6">&bull; XOS bifidogenesis: <a href="https://pubmed.ncbi.nlm.nih.gov/24661576/" target="_blank" style="color:var(--light);text-decoration:underline">Childs et al., 2014, Br J Nutr (PubMed 24661576)</a><br>
+&bull; XOS synbiotic effects: <a href="https://pubmed.ncbi.nlm.nih.gov/39664910/" target="_blank" style="color:var(--light);text-decoration:underline">Niu et al., 2024 (PubMed 39664910)</a><br>
+&bull; FDA GRAS for xylo-oligosaccharides: <a href="https://www.hfpappexternal.fda.gov/scripts/fdcc/index.cfm?set=GRASNotices&id=343" target="_blank" style="color:var(--light);text-decoration:underline">FDA GRN 343</a><br>
+&bull; Fibersol-2 tolerability &amp; microbiota: <a href="https://pubmed.ncbi.nlm.nih.gov/18689571/" target="_blank" style="color:var(--light);text-decoration:underline">Fastinger et al., 2008, J Am Coll Nutr (PubMed 18689571)</a><br>
+&bull; Fibersol-2 digestive tolerability: <a href="https://pubmed.ncbi.nlm.nih.gov/36121843/" target="_blank" style="color:var(--light);text-decoration:underline">Shahid et al., 2022 (PubMed 36121843)</a></p>
 </div>
 </div>
 <p class="sm tc" style="margin-top:32px;font-style:italic;color:var(--light)">This page is provided for informational purposes. These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -873,7 +721,7 @@ nav{padding:0 16px}
 
 <div class="acc" onclick="toggleAcc(this)">
 <div class="acc-q">How much does Pheeew cost?</div>
-<div class="acc-a">Individual pouches are $4.50 each. Our subscription (30-pack delivered monthly) is $89/month &mdash; that's about $2.97 per pouch, a 34% savings. We also offer 15-pack ($49/mo) and 60-pack ($169/mo) subscriptions. Subscriptions include free shipping, pause/cancel anytime flexibility, and priority access to new flavors.</div>
+<div class="acc-a">Individual pouches are $4.50 each. Our subscription (30-pack delivered monthly) is $89/month &mdash; that's about $2.97 per pouch, a 34% savings. We also offer 15-pack ($45/mo) and 60-pack ($168/2mo) subscriptions. Subscriptions include free shipping, pause/cancel anytime flexibility, and priority access to new flavors.</div>
 </div>
 
 <div class="acc" onclick="toggleAcc(this)">
@@ -955,7 +803,7 @@ nav{padding:0 16px}
 <span style="background:rgba(255,107,53,.1);color:var(--tp);padding:4px 10px;border-radius:100px;font-size:10px;font-weight:600">Fibersol-2L</span>
 <span style="background:rgba(255,107,53,.1);color:var(--tp);padding:4px 10px;border-radius:100px;font-size:10px;font-weight:600">Vitamin C</span>
 </div>
-<p style="font-size:9px;color:var(--light);margin-top:8px">Spore-forming probiotic: <a href="https://www.hfpappexternal.fda.gov/scripts/fdcc/index.cfm?set=GRASNotices&id=597" target="_blank" style="color:var(--light)">FDA GRN 597</a>. Prebiotic fiber: <a href="https://www.hfpappexternal.fda.gov/scripts/fdcc/index.cfm?set=GRASNotices&id=864" target="_blank" style="color:var(--light)">FDA GRN 864</a>.</p>
+<p style="font-size:9px;color:var(--light);margin-top:8px">Spore-forming probiotic: <a href="https://www.hfpappexternal.fda.gov/scripts/fdcc/index.cfm?set=GRASNotices&id=597" target="_blank" style="color:var(--light)">FDA GRN 597</a>. XOS: <a href="https://pubmed.ncbi.nlm.nih.gov/24661576/" target="_blank" style="color:var(--light)">Childs et al., 2014</a>, <a href="https://www.hfpappexternal.fda.gov/scripts/fdcc/index.cfm?set=GRASNotices&id=343" target="_blank" style="color:var(--light)">FDA GRN 343</a>. Fibersol-2L: <a href="https://pubmed.ncbi.nlm.nih.gov/18689571/" target="_blank" style="color:var(--light)">Fastinger et al., 2008</a>.</p>
 </div>
 
 <!-- PURCHASE OPTIONS -->
@@ -979,9 +827,9 @@ nav{padding:0 16px}
 
 <!-- PACK SIZE -->
 <div style="display:flex;gap:8px;margin-bottom:16px">
-<div style="flex:1;text-align:center;padding:10px;border-radius:8px;border:1px solid var(--border);cursor:pointer;font-size:12px;font-weight:600;color:var(--mid)">15-pack<br><span style="color:var(--white);font-size:14px;font-weight:700">$49</span></div>
+<div style="flex:1;text-align:center;padding:10px;border-radius:8px;border:1px solid var(--border);cursor:pointer;font-size:12px;font-weight:600;color:var(--mid)">15-pack<br><span style="color:var(--white);font-size:14px;font-weight:700">$45</span></div>
 <div style="flex:1;text-align:center;padding:10px;border-radius:8px;border:2px solid var(--tp);cursor:pointer;font-size:12px;font-weight:600;color:var(--white);background:rgba(255,107,53,.05)">30-pack<br><span style="color:var(--tp);font-size:14px;font-weight:700">$89</span></div>
-<div style="flex:1;text-align:center;padding:10px;border-radius:8px;border:1px solid var(--border);cursor:pointer;font-size:12px;font-weight:600;color:var(--mid)">60-pack<br><span style="color:var(--white);font-size:14px;font-weight:700">$169</span></div>
+<div style="flex:1;text-align:center;padding:10px;border-radius:8px;border:1px solid var(--border);cursor:pointer;font-size:12px;font-weight:600;color:var(--mid)">60-pack<br><span style="color:var(--white);font-size:14px;font-weight:700">$168</span></div>
 </div>
 
 <a class="btn btn-tp" onclick="showPage('preorder')" style="width:100%;justify-content:center;font-size:16px;padding:16px 32px">Join Waitlist &mdash; Launching Fall 2026</a>
@@ -1034,9 +882,9 @@ nav{padding:0 16px}
 </div>
 
 <div style="display:flex;gap:8px;margin-bottom:16px">
-<div style="flex:1;text-align:center;padding:10px;border-radius:8px;border:1px solid var(--border);cursor:pointer;font-size:12px;font-weight:600;color:var(--mid)">15-pack<br><span style="color:var(--white);font-size:14px;font-weight:700">$49</span></div>
+<div style="flex:1;text-align:center;padding:10px;border-radius:8px;border:1px solid var(--border);cursor:pointer;font-size:12px;font-weight:600;color:var(--mid)">15-pack<br><span style="color:var(--white);font-size:14px;font-weight:700">$45</span></div>
 <div style="flex:1;text-align:center;padding:10px;border-radius:8px;border:2px solid var(--gp);cursor:pointer;font-size:12px;font-weight:600;color:var(--white);background:rgba(232,197,71,.05)">30-pack<br><span style="color:var(--gp);font-size:14px;font-weight:700">$89</span></div>
-<div style="flex:1;text-align:center;padding:10px;border-radius:8px;border:1px solid var(--border);cursor:pointer;font-size:12px;font-weight:600;color:var(--mid)">60-pack<br><span style="color:var(--white);font-size:14px;font-weight:700">$169</span></div>
+<div style="flex:1;text-align:center;padding:10px;border-radius:8px;border:1px solid var(--border);cursor:pointer;font-size:12px;font-weight:600;color:var(--mid)">60-pack<br><span style="color:var(--white);font-size:14px;font-weight:700">$168</span></div>
 </div>
 
 <a class="btn" onclick="showPage('preorder')" style="width:100%;justify-content:center;font-size:16px;padding:16px 32px;background:var(--gp);color:#111">Join Waitlist &mdash; Launching Fall 2026</a>
@@ -1090,9 +938,9 @@ nav{padding:0 16px}
 </div>
 
 <div style="display:flex;gap:8px;margin-bottom:16px">
-<div style="flex:1;text-align:center;padding:10px;border-radius:8px;border:1px solid var(--border);cursor:pointer;font-size:12px;font-weight:600;color:var(--mid)">15-pack<br><span style="color:var(--white);font-size:14px;font-weight:700">$49</span></div>
+<div style="flex:1;text-align:center;padding:10px;border-radius:8px;border:1px solid var(--border);cursor:pointer;font-size:12px;font-weight:600;color:var(--mid)">15-pack<br><span style="color:var(--white);font-size:14px;font-weight:700">$45</span></div>
 <div style="flex:1;text-align:center;padding:10px;border-radius:8px;border:2px solid var(--wb);cursor:pointer;font-size:12px;font-weight:600;color:var(--white);background:rgba(139,69,166,.05)">30-pack<br><span style="color:var(--wb);font-size:14px;font-weight:700">$89</span></div>
-<div style="flex:1;text-align:center;padding:10px;border-radius:8px;border:1px solid var(--border);cursor:pointer;font-size:12px;font-weight:600;color:var(--mid)">60-pack<br><span style="color:var(--white);font-size:14px;font-weight:700">$169</span></div>
+<div style="flex:1;text-align:center;padding:10px;border-radius:8px;border:1px solid var(--border);cursor:pointer;font-size:12px;font-weight:600;color:var(--mid)">60-pack<br><span style="color:var(--white);font-size:14px;font-weight:700">$168</span></div>
 </div>
 
 <a class="btn" onclick="showPage('preorder')" style="width:100%;justify-content:center;font-size:16px;padding:16px 32px;background:var(--wb);color:#fff">Join Waitlist &mdash; Launching Fall 2026</a>
@@ -1115,6 +963,61 @@ nav{padding:0 16px}
 </div>
 </div>
 
+</div>
+</div>
+
+<!-- REVIEWS SECTION (merged from reviews page) -->
+<div class="bg-near">
+<div class="s tc">
+<p class="tag tag-lime">REVIEWS</p>
+<h2>What people are <span style="color:var(--lime)">saying.</span></h2>
+<p class="md" style="max-width:460px;margin:0 auto 16px">We're pre-launch, so these are early tester reviews. Real reviews from real customers coming soon.</p>
+
+<!-- Review filter tabs -->
+<!-- DEV NOTE: Review filtering by flavor is a future dev feature to be built. These tabs are visual-only for now. -->
+<div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:32px;margin-top:24px">
+<button class="review-filter-tab" style="background:#111;color:#fff;border:2px solid #111;padding:8px 20px;border-radius:100px;font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:.2s">All Reviews</button>
+<button class="review-filter-tab" style="background:transparent;color:var(--tp);border:2px solid var(--tp);padding:8px 20px;border-radius:100px;font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:.2s">Tropical Punch</button>
+<button class="review-filter-tab" style="background:transparent;color:var(--gp);border:2px solid var(--gp);padding:8px 20px;border-radius:100px;font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:.2s">Ginger Pear</button>
+<button class="review-filter-tab" style="background:transparent;color:var(--wb);border:2px solid var(--wb);padding:8px 20px;border-radius:100px;font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:.2s">Wild Berries</button>
+</div>
+</div>
+</div>
+
+<div class="bg-near">
+<div class="s" style="padding-top:0">
+<div class="g3">
+<div class="review-card">
+<div class="review-stars">&starf;&starf;&starf;&starf;&starf;</div>
+<p class="review-text">"I've tried every probiotic on the market. This is the first one I actually look forward to taking. The Tropical Punch is addictive."</p>
+<p class="review-author">Early Tester &mdash; Los Angeles, CA</p>
+</div>
+<div class="review-card">
+<div class="review-stars">&starf;&starf;&starf;&starf;&starf;</div>
+<p class="review-text">"Finally, a gut health product that doesn't taste like punishment. My kids keep trying to steal the Ginger Pear ones."</p>
+<p class="review-author">Early Tester &mdash; Austin, TX</p>
+</div>
+<div class="review-card">
+<div class="review-stars">&starf;&starf;&starf;&starf;&starf;</div>
+<p class="review-text">"The Wild Berries flavor gives me clean energy without the jitters. I've replaced my afternoon coffee with this."</p>
+<p class="review-author">Early Tester &mdash; Brooklyn, NY</p>
+</div>
+<div class="review-card">
+<div class="review-stars">&starf;&starf;&starf;&starf;&starf;</div>
+<p class="review-text">"I love that I can throw these in my bag without worrying about refrigeration. The science behind the spore-forming probiotic sold me."</p>
+<p class="review-author">Early Tester &mdash; San Francisco, CA</p>
+</div>
+<div class="review-card">
+<div class="review-stars">&starf;&starf;&starf;&starf;&star;</div>
+<p class="review-text">"Really smooth texture, way better than I expected from a pouch. Wish they came in a bigger size but otherwise perfect."</p>
+<p class="review-author">Early Tester &mdash; Miami, FL</p>
+</div>
+<div class="review-card">
+<div class="review-stars">&starf;&starf;&starf;&starf;&starf;</div>
+<p class="review-text">"My digestion has been noticeably better after two weeks. And I actually enjoy taking it. That's never happened with a probiotic."</p>
+<p class="review-author">Early Tester &mdash; Portland, OR</p>
+</div>
+</div>
 </div>
 </div>
 
@@ -1164,83 +1067,7 @@ nav{padding:0 16px}
 </div><!-- /preorder -->
 
 
-<!-- ================================================================ -->
-<!-- PAGE 8: REVIEWS                                                  -->
-<!-- ================================================================ -->
-<div class="page" id="reviews">
-<div class="spacer"></div>
-
-<div class="bg-black">
-<div class="s tc">
-<p class="tag tag-lime">REVIEWS</p>
-<h2>What people are <span style="color:var(--lime)">saying.</span></h2>
-<p class="md" style="max-width:460px;margin:0 auto 16px">We're pre-launch, so these are early tester reviews. Real reviews from real customers coming soon.</p>
-</div>
-</div>
-
-<!-- EARLY REVIEWS -->
-<div class="bg-near">
-<div class="s">
-<div class="g3">
-<div class="review-card">
-<div class="review-stars">&starf;&starf;&starf;&starf;&starf;</div>
-<p class="review-text">"I've tried every probiotic on the market. This is the first one I actually look forward to taking. The Tropical Punch is addictive."</p>
-<p class="review-author">Early Tester &mdash; Los Angeles, CA</p>
-</div>
-<div class="review-card">
-<div class="review-stars">&starf;&starf;&starf;&starf;&starf;</div>
-<p class="review-text">"Finally, a gut health product that doesn't taste like punishment. My kids keep trying to steal the Ginger Pear ones."</p>
-<p class="review-author">Early Tester &mdash; Austin, TX</p>
-</div>
-<div class="review-card">
-<div class="review-stars">&starf;&starf;&starf;&starf;&starf;</div>
-<p class="review-text">"The Wild Berries flavor gives me clean energy without the jitters. I've replaced my afternoon coffee with this."</p>
-<p class="review-author">Early Tester &mdash; Brooklyn, NY</p>
-</div>
-<div class="review-card">
-<div class="review-stars">&starf;&starf;&starf;&starf;&starf;</div>
-<p class="review-text">"I love that I can throw these in my bag without worrying about refrigeration. The science behind the spore-forming probiotic sold me."</p>
-<p class="review-author">Early Tester &mdash; San Francisco, CA</p>
-</div>
-<div class="review-card">
-<div class="review-stars">&starf;&starf;&starf;&starf;&star;</div>
-<p class="review-text">"Really smooth texture, way better than I expected from a pouch. Wish they came in a bigger size but otherwise perfect."</p>
-<p class="review-author">Early Tester &mdash; Miami, FL</p>
-</div>
-<div class="review-card">
-<div class="review-stars">&starf;&starf;&starf;&starf;&starf;</div>
-<p class="review-text">"My digestion has been noticeably better after two weeks. And I actually enjoy taking it. That's never happened with a probiotic."</p>
-<p class="review-author">Early Tester &mdash; Portland, OR</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- AS SEEN IN -->
-<div class="bg-black">
-<div class="s tc">
-<p class="tag tag-lime" style="margin-bottom:32px">AS SEEN IN</p>
-<div class="seen-in">
-<span>TechCrunch</span>
-<span>Forbes</span>
-<span>Well+Good</span>
-<span>Bon Appetit</span>
-<span>Goop</span>
-</div>
-<p class="sm" style="margin-top:20px;font-style:italic">Press features coming soon. Placeholder for launch PR.</p>
-</div>
-</div>
-
-<!-- CTA -->
-<div class="bg-lime">
-<div class="s tc" style="padding:48px 32px">
-<h3 style="color:var(--black)">Ready to feel the Pheeew?</h3>
-<p style="font-size:15px;color:rgba(0,0,0,.6);margin-bottom:20px">Join the waitlist. Be first in line.</p>
-<a class="btn btn-b" onclick="showPage('preorder')">Join the Waitlist &rarr;</a>
-</div>
-</div>
-
-</div><!-- /reviews -->
+<!-- Reviews page removed: merged into Shop -->
 
 
 <!-- ================================================================ -->
@@ -1531,16 +1358,14 @@ nav{padding:0 16px}
 </div>
 <div>
 <h4>Shop</h4>
-<a onclick="showPage('products')" style="cursor:pointer">All Products</a>
 <a onclick="showPage('shop')" style="cursor:pointer">Shop &amp; Subscribe</a>
-<a onclick="showPage('preorder')" style="cursor:pointer">Preorder / Waitlist</a>
+<a onclick="showPage('preorder')" style="cursor:pointer">Join Waitlist</a>
 </div>
 <div>
 <h4>Learn</h4>
 <a onclick="showPage('science')" style="cursor:pointer">The Science</a>
 <a onclick="showPage('about')" style="cursor:pointer">Our Story</a>
 <a onclick="showPage('faq')" style="cursor:pointer">FAQ</a>
-<a onclick="showPage('reviews')" style="cursor:pointer">Reviews</a>
 <a onclick="showPage('ambassadors')" style="cursor:pointer">Pheeew Collective</a>
 </div>
 <div>
@@ -1586,6 +1411,32 @@ function toggleMobileNav() {
 // FAQ ACCORDION
 function toggleAcc(el) {
   el.classList.toggle('open');
+}
+
+// FLAVOR SELECTOR (Shop PDP tabs)
+function selectFlavor(flavor) {
+  // Hide all PDP panels
+  document.querySelectorAll('.pdp-panel').forEach(p => p.style.display = 'none');
+  // Show selected panel
+  var panel = document.getElementById('pdp-' + flavor);
+  if (panel) panel.style.display = 'block';
+  // Update tab styling
+  var flavors = ['tp', 'gp', 'wb'];
+  var colors = {'tp': 'var(--tp)', 'gp': 'var(--gp)', 'wb': 'var(--wb)'};
+  flavors.forEach(function(f) {
+    var tab = document.getElementById('ftab-' + f);
+    if (tab) {
+      if (f === flavor) {
+        tab.style.background = colors[f];
+        tab.style.color = f === 'gp' ? '#111' : '#fff';
+        tab.style.borderColor = colors[f];
+      } else {
+        tab.style.background = 'transparent';
+        tab.style.color = colors[f];
+        tab.style.borderColor = colors[f];
+      }
+    }
+  });
 }
 
 // PREORDER
