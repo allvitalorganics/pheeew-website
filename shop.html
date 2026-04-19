@@ -1,261 +1,627 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shop — PHEEEW</title>
-  <meta name="description" content="Gut + Energy. Five sizes, one-time or subscribe. Free shipping on subscriptions 30 and up. Skip anytime. No lock-in." />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shop Gut + Energy · PHEEEW</title>
+<meta name="description" content="A smoothie for your gut. Clean caffeine. Real synbiotic base. Subscribe and save 27%. Skip or cancel anytime." />
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- ═══ NAV ═══ -->
-<header class="nav">
+<!-- Nav -->
+<nav class="nav">
   <div class="nav-inner">
     <a href="home.html" class="nav-brand">PHEEEW</a>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="shop.html" class="current">Shop</a></li>
-        <li><a href="our-story.html">Our story</a></li>
-        <li><a href="science.html">Science</a></li>
-        <li><a href="community.html">Community</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </nav>
-    <a href="shop.html" class="nav-cta">Shop</a>
+    <ul class="nav-links">
+      <li><a href="shop.html" class="current">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <a href="shop.html" class="nav-cta" data-phase="post">Shop Gut + Energy</a>
   </div>
-</header>
+</nav>
 
-<main>
+<!-- PDP HERO -->
+<section class="container">
+  <div class="pdp-hero">
+    <div class="pdp-media">
+      <div class="product-render" data-caption="Gut + Energy · pouch render · by Dawon Kim"></div>
+    </div>
 
-<!-- ═══ PRODUCT HERO ═══ -->
-<section class="section" style="padding-top: 64px;">
-  <div class="container">
-    <div class="grid grid-2" style="align-items: center; gap: 64px;">
-      <div>
-        <div class="pouch-hero"></div>
+    <div class="pdp-info">
+      <span class="eyebrow">Phase 1 · launch SKU</span>
+      <h1>Gut + Energy</h1>
+      <p class="pdp-descriptor">A smoothie for your gut. Clean caffeine. Real synbiotic base.</p>
+
+      <div class="star-rating">
+        <span class="stars">★★★★★</span>
+        <span>5.0 · 127 reviews</span>
+        <span class="placeholder-tag">placeholder · pre-launch</span>
       </div>
-      <div>
-        <div class="eyebrow">Phase 01 · Gut + Energy</div>
-        <h1 style="font-size: var(--text-3xl); font-weight: 700; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 18px;">A clean lift, on a real gut base.</h1>
-        <p style="font-size: var(--text-md); color: var(--text-tertiary); line-height: 1.6; margin-bottom: 24px;">Green tea caffeine. B6 and B12. Pre + probiotic synbiotic underneath. 100mL, shelf-stable, five seconds. The pouch that replaces the afternoon coffee you don't actually want.</p>
-        <ul style="list-style: none; margin-bottom: 28px;">
-          <li style="padding: 6px 0; font-size: var(--text-base); color: var(--text-secondary);">— Pre + probiotic in one pouch</li>
-          <li style="padding: 6px 0; font-size: var(--text-base); color: var(--text-secondary);">— 50–75mg natural caffeine from green tea</li>
-          <li style="padding: 6px 0; font-size: var(--text-base); color: var(--text-secondary);">— Shelf-stable — no fridge needed</li>
-          <li style="padding: 6px 0; font-size: var(--text-base); color: var(--text-secondary);">— Made in Naju, Korea. Shipped from LA.</li>
-        </ul>
-        <a href="#pricing" class="btn btn-primary">See pricing</a>
-        <a href="science.html" class="btn btn-ghost" style="margin-left: 12px;">Read the science →</a>
+
+      <!-- Purchase selector -->
+      <div class="purchase-selector" id="purchase-selector">
+
+        <!-- Step 1 · plan type -->
+        <div class="selector-step">
+          <span class="selector-label">1 · Plan</span>
+          <div class="toggle-pills" role="tablist">
+            <button type="button" class="toggle-pill active" data-plan="sub">Subscribe <span class="save-tag">Save 27%</span></button>
+            <button type="button" class="toggle-pill" data-plan="ot">One-time</button>
+          </div>
+        </div>
+
+        <!-- Step 2 · pack size -->
+        <div class="selector-step">
+          <span class="selector-label">2 · Pack size</span>
+          <div class="pack-list" id="pack-list">
+
+            <div class="pack-card" data-pack="tester" data-ot="34" data-sub="" data-per="3.40" data-ot-only="1">
+              <div>
+                <div class="pack-title">Tester · 10-pack</div>
+                <div class="pack-meta">First-time customers only · one-time only</div>
+              </div>
+              <div>
+                <div class="pack-price">$34</div>
+                <div class="pack-per">$3.40 / pouch</div>
+              </div>
+            </div>
+
+            <div class="pack-card" data-pack="starter" data-ot="59" data-sub="49" data-per-ot="2.95" data-per-sub="2.45">
+              <div>
+                <div class="pack-title">Starter · 20-pack</div>
+                <div class="pack-meta">Try before you commit · bridge to the monthly</div>
+              </div>
+              <div>
+                <div class="pack-price price-display">$49</div>
+                <div class="pack-per per-display">$2.45 / pouch</div>
+              </div>
+            </div>
+
+            <div class="pack-card active" data-pack="core" data-ot="99" data-sub="72" data-per-ot="3.30" data-per-sub="2.40">
+              <span class="most-popular">Most popular</span>
+              <div>
+                <div class="pack-title">Core · 30-pack</div>
+                <div class="pack-meta">One a day, for the habit tier</div>
+              </div>
+              <div>
+                <div class="pack-price price-display">$72</div>
+                <div class="pack-per per-display">$2.40 / pouch</div>
+              </div>
+            </div>
+
+            <div class="pack-card" data-pack="committed" data-ot="179" data-sub="139" data-per-ot="2.98" data-per-sub="2.32">
+              <div>
+                <div class="pack-title">Committed · 60-pack</div>
+                <div class="pack-meta">For the 2-a-day people</div>
+              </div>
+              <div>
+                <div class="pack-price price-display">$139</div>
+                <div class="pack-per per-display">$2.32 / pouch</div>
+              </div>
+            </div>
+
+            <div class="pack-card" data-pack="household" data-ot="329" data-sub="259" data-per-ot="2.74" data-per-sub="2.16">
+              <div>
+                <div class="pack-title">Household · 120-pack</div>
+                <div class="pack-meta">Share the drawer</div>
+              </div>
+              <div>
+                <div class="pack-price price-display">$259</div>
+                <div class="pack-per per-display">$2.16 / pouch</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Step 3 · quantity -->
+        <div class="selector-step">
+          <span class="selector-label">3 · Quantity</span>
+          <div class="qty-stepper">
+            <button type="button" id="qty-minus" aria-label="Decrease">−</button>
+            <span class="qty-val" id="qty-val">1</span>
+            <button type="button" id="qty-plus" aria-label="Increase">+</button>
+          </div>
+        </div>
+
+        <!-- Step 4 · frequency (sub only) -->
+        <div class="selector-step" id="freq-step">
+          <span class="selector-label">4 · Delivery frequency</span>
+          <select class="freq-select" id="freq-select">
+            <option value="30">Every 30 days</option>
+            <option value="45">Every 45 days</option>
+            <option value="60">Every 60 days</option>
+          </select>
+        </div>
+
+        <button type="button" class="cta-primary" id="add-to-cart">
+          Add to cart · <span class="price-live" id="cta-price">$72</span>
+        </button>
+        <a href="index.html" class="cta-secondary">Join waitlist instead</a>
+
+        <div class="trust-strip">
+          <div class="trust-item"><span class="trust-icon">→</span><span>Free shipping on subs</span></div>
+          <div class="trust-item"><span class="trust-icon">↻</span><span>Skip anytime</span></div>
+          <div class="trust-item"><span class="trust-icon">○</span><span>No auto-ship traps</span></div>
+          <div class="trust-item"><span class="trust-icon">✕</span><span>Cancel in 2 clicks</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ PRICING LADDER ═══ -->
-<section class="section" id="pricing">
+<!-- Benefit strip -->
+<section class="section">
   <div class="container">
-    <div class="eyebrow">Pricing</div>
-    <h2 class="section-title">One pouch. Five ways to buy it.</h2>
-    <p class="section-lede">Try ten. Commit to thirty. Stock the fridge with one-twenty. Subscribe and save 25–30%. Skip, pause, or cancel anytime.</p>
-    <div class="ladder">
+    <div class="benefit-strip">
+      <div class="benefit-card">
+        <h4>Gut-first</h4>
+        <p>Synbiotic base in every SKU. Pre + probiotic in one pouch — not a supplement you stack on top of everything else.</p>
+      </div>
+      <div class="benefit-card">
+        <h4>Real fruit, real taste</h4>
+        <p>Not chalk, not a shot. Actually drinkable. Your kitchen counter won't hate you for leaving it out.</p>
+      </div>
+      <div class="benefit-card">
+        <h4>Clean caffeine</h4>
+        <p>Green tea extract and B-vitamins. Lift without the jitter story. No energy drink vocabulary.</p>
+      </div>
+      <div class="benefit-card">
+        <h4>Small batches</h4>
+        <p>40,000 pouches, one Korean manufacturer, shelf-stable for 12 months. Made where the discipline lives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- "Not just another" comparison -->
+<section class="section">
+  <div class="container">
+    <div style="margin-bottom:32px;max-width:720px">
+      <div class="eyebrow">Not just another</div>
+      <h2 class="section-title">If you've tried the other things, here's what's different.</h2>
+    </div>
+    <div class="comparison-table">
       <table>
         <thead>
           <tr>
-            <th>Pack</th>
-            <th>One-time</th>
-            <th>Subscribe &amp; save</th>
-            <th>Per pouch (sub)</th>
             <th></th>
+            <th class="col-us">PHEEEW</th>
+            <th>Wellness shots</th>
+            <th>Greens powders</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>
-              <div class="tier-name">Tester · 10-pack</div>
-              <div class="tier-sub">For the first-time buyer. One-time only.</div>
-            </td>
-            <td class="price">$34</td>
-            <td class="price" style="color: var(--text-quaternary);">—</td>
-            <td class="price">$3.40</td>
-            <td><a href="#" class="btn btn-secondary">Add</a></td>
+            <td class="row-label">Format</td>
+            <td class="col-us">100mL pouch · squeeze and drink</td>
+            <td>1.7oz glass bottle · one gulp</td>
+            <td>Scoop + shaker + water</td>
           </tr>
           <tr>
-            <td>
-              <div class="tier-name">Starter · 20-pack</div>
-              <div class="tier-sub">The bridge from tester to daily.</div>
-            </td>
-            <td class="price">$59</td>
-            <td class="price">$49 <span class="save">Save 17%</span></td>
-            <td class="price">$2.45</td>
-            <td><a href="#" class="btn btn-secondary">Add</a></td>
-          </tr>
-          <tr class="hero-row">
-            <td>
-              <div class="tier-name">Core · 30-pack · Most popular</div>
-              <div class="tier-sub">The hero. One pouch a day, delivered monthly.</div>
-            </td>
-            <td class="price">$99</td>
-            <td class="price">$72 <span class="save">Save 27%</span></td>
-            <td class="price">$2.40</td>
-            <td><a href="#" class="btn btn-primary">Subscribe</a></td>
+            <td class="row-label">Taste</td>
+            <td class="col-us">Real fruit purée — actually drinkable</td>
+            <td>Sharp, vinegar-forward, medicinal</td>
+            <td>Chalk, grass, or masked with stevia</td>
           </tr>
           <tr>
-            <td>
-              <div class="tier-name">Committed · 60-pack</div>
-              <div class="tier-sub">Two-month supply. Ships every other month.</div>
-            </td>
-            <td class="price">$179</td>
-            <td class="price">$139 <span class="save">Save 22%</span></td>
-            <td class="price">$2.32</td>
-            <td><a href="#" class="btn btn-secondary">Add</a></td>
+            <td class="row-label">What's inside</td>
+            <td class="col-us">Synbiotic + green tea + B-vitamins</td>
+            <td>Turmeric / ginger / apple cider vinegar</td>
+            <td>50+ ingredient proprietary blends</td>
           </tr>
           <tr>
-            <td>
-              <div class="tier-name">Household · 120-pack</div>
-              <div class="tier-sub">Four months in the pantry. Share with the house.</div>
-            </td>
-            <td class="price">$329</td>
-            <td class="price">$259 <span class="save">Save 21%</span></td>
-            <td class="price">$2.16</td>
-            <td><a href="#" class="btn btn-secondary">Add</a></td>
+            <td class="row-label">Price / serving</td>
+            <td class="col-us">$2.40 on sub</td>
+            <td>$3.50–4.50</td>
+            <td>$3.00–4.00</td>
+          </tr>
+          <tr>
+            <td class="row-label">Feel</td>
+            <td class="col-us">A thing you want to drink</td>
+            <td>A thing you have to drink</td>
+            <td>A thing you forget to make</td>
           </tr>
         </tbody>
       </table>
     </div>
-
-    <div class="callout mt-32">
-      <p><strong>Subscription benefits.</strong> 25–30% off every box at Core and up. Skip anytime, swap flavors when the line grows, cancel in two clicks. Free shipping on Core, Committed, and Household. $3.99 shipping on Starter sub to keep the math honest.</p>
-    </div>
   </div>
 </section>
 
-<!-- ═══ NOT READY TO COMMIT ═══ -->
+<!-- What's inside -->
 <section class="section">
   <div class="container">
-    <div class="banner">
-      <div class="eyebrow">Not ready to commit?</div>
-      <h2>Try ten pouches. No subscription. No drama.</h2>
-      <p>The Tester 10-pack exists for one reason: first pouches should be easy. $34, ships in a small box, tells you everything you need to know about whether PHEEEW fits your day.</p>
-      <a href="#pricing" class="btn btn-primary">Grab a 10-pack</a>
+    <div style="margin-bottom:32px;max-width:720px">
+      <div class="eyebrow">What's inside</div>
+      <h2 class="section-title">Three things we kept on purpose.</h2>
+      <p class="section-lede">Feeling-first. The science is honest, it just doesn't get to speak first.</p>
     </div>
-  </div>
-</section>
 
-<!-- ═══ SHIPPING POLICY ═══ -->
-<section class="section">
-  <div class="container">
-    <div class="eyebrow">Shipping &amp; returns</div>
-    <h2 class="section-title">What to expect.</h2>
-    <div class="grid grid-3">
+    <div class="inside-cards">
       <div class="card">
-        <h3>Free shipping on sub 30+</h3>
-        <p>Core, Committed, and Household subscriptions ship free in the continental US. Starter sub ships at $3.99 flat. One-time orders ship at $5.99 flat — subscribe and it's on us.</p>
+        <span class="card-tag">The format</span>
+        <h3>100mL pouch</h3>
+        <p>Shelf-stable. Fits in a belt bag. Five seconds from pocket to done. Not a shot, not a juice — a pouch.</p>
       </div>
       <div class="card">
-        <h3>Delivery timing</h3>
-        <p>Orders out of our LA 3PL ship within two business days. Ground delivery lands in 3–7 days depending on zip. Subscription boxes arrive on or before your renewal date.</p>
+        <span class="card-tag">The base</span>
+        <h3>Synbiotic</h3>
+        <p>Pre + probiotic together. Spore-forming strain that survives shelf, heat, and stomach acid — it reaches your gut alive.</p>
       </div>
       <div class="card">
-        <h3>Damaged or wrong order</h3>
-        <p>Food and drink are non-returnable — but if a pouch arrives damaged or the wrong order lands at your door, we send a replacement. Email hello@pheeew.com with a photo. We make it right.</p>
+        <span class="card-tag">The function</span>
+        <h3>Energy, clean</h3>
+        <p>Green tea extract and B-vitamins on top of the base. Natural caffeine, natural energy support.</p>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ═══ PHASE 2/3 TEASER ═══ -->
-<section class="section">
-  <div class="container">
-    <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 48px; box-shadow: var(--shadow-sm);">
-      <div class="eyebrow">The roadmap</div>
-      <h2 style="font-size: var(--text-2xl); font-weight: 700; letter-spacing: -0.025em; margin-bottom: 16px;">Digestion and Immunity earn their turn.</h2>
-      <p style="font-size: var(--text-md); color: var(--text-tertiary); max-width: 620px; line-height: 1.6;">Energy is the anchor. Gut + Digestion follows once we know the first SKU proves out — same base, different fruit, Vitamin C. Gut + Immunity lands after that. We'd rather do three pouches well than six pouches okay.</p>
-    </div>
-  </div>
-</section>
+    <details class="ingredient-expand">
+      <summary>See the full ingredient stack</summary>
+      <div class="expand-body">
+        <p style="margin-bottom:12px">Working stack — final formulation locks pre-launch.</p>
+        <ul>
+          <li><strong>Bacillus coagulans SNZ 1969</strong> — 1 billion CFU per pouch · spore-forming probiotic · FDA GRAS</li>
+          <li><strong>XOS (xylo-oligosaccharides)</strong> — prebiotic fiber · food for good bacteria · low, non-bloating dose</li>
+          <li><strong>Fibersol-2</strong> — resistant maltodextrin · prebiotic fiber · well-tolerated</li>
+          <li><strong>Green tea extract</strong> — ~50–75mg natural caffeine per pouch</li>
+          <li><strong>Vitamin B6 + B12</strong> — supports energy metabolism</li>
+          <li><strong>Real fruit purée</strong> — flavor and body · final profile TBD with Alex</li>
+        </ul>
+        <p style="margin-top:14px;font-size:var(--text-sm);color:var(--text-quaternary)"><em>Final flavor profile and dosing lock with the Energy re-quote. Full Nutrition Facts panel ships on the pouch and on this page at launch.</em></p>
+      </div>
+    </details>
 
-<!-- ═══ SHOP FAQ SHORT ═══ -->
-<section class="section">
-  <div class="container">
-    <div class="eyebrow">Before you buy</div>
-    <h2 class="section-title">Four quick ones.</h2>
-    <div style="max-width: 760px;">
-      <details class="faq" open>
-        <summary>When will my subscription ship?</summary>
-        <div class="answer">
-          <p>Your first box ships within two business days of ordering. After that, boxes renew on the same date each cycle — monthly for Core, every two months for Committed, quarterly for Household. You'll get an email three days before each renewal so you can skip, swap, or cancel.</p>
-        </div>
-      </details>
-      <details class="faq">
-        <summary>Can I skip or cancel?</summary>
-        <div class="answer">
-          <p>Any time, two clicks. Log into your account, skip the next box, swap to a different size, or cancel entirely. No lock-in, no call-to-cancel, no guilt flow.</p>
-        </div>
-      </details>
-      <details class="faq">
-        <summary>What's your return policy?</summary>
-        <div class="answer">
-          <p>Food and drink are non-returnable for safety reasons. But if your order arrives damaged or we sent the wrong thing, email <a href="mailto:hello@pheeew.com">hello@pheeew.com</a> with a photo and we'll send a replacement.</p>
-        </div>
-      </details>
-      <details class="faq">
-        <summary>How long does delivery take?</summary>
-        <div class="answer">
-          <p>3–7 business days in the continental US via ground shipping. West Coast usually lands in 3–4 days, East Coast closer to 6–7. We don't currently ship to AK, HI, or internationally — we're working on it.</p>
-        </div>
-      </details>
-    </div>
     <div class="text-center mt-32">
-      <a href="faq.html" class="btn btn-secondary">Read all the answers</a>
+      <a href="about.html#science" class="btn-ghost">Read the full science →</a>
     </div>
   </div>
 </section>
 
-</main>
+<!-- How it works -->
+<section class="section">
+  <div class="container">
+    <div style="margin-bottom:32px;max-width:720px">
+      <div class="eyebrow">How subscription works</div>
+      <h2 class="section-title">Three steps, and a promise about the fourth.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">Step 1</div>
+        <h4>Choose your pack</h4>
+        <p>Most people start with Core 30. If you're not sure, grab a 10-pack Tester — it's one-time, no commitment.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">Step 2</div>
+        <h4>It arrives every 30 days</h4>
+        <p>Free shipping on every subscription box. Subs ship in 2–4 business days. Email reminder three days before each renewal.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">Step 3</div>
+        <h4>Skip, pause, or cancel</h4>
+        <p>Every option in your account dashboard. Two clicks. No phone call.</p>
+      </div>
+    </div>
+    <div class="callout">
+      <p><strong>We don't do dark patterns.</strong> One-click cancel lives in your account dashboard. No retention offer, no "are you sure" gauntlet, no phone call. If it's not working, we want you gone — and we want you back when it is.</p>
+    </div>
+    <div class="mt-16">
+      <a href="subscription-terms.html" class="btn-ghost">Read subscription terms →</a>
+    </div>
+  </div>
+</section>
 
-<!-- ═══ FOOTER ═══ -->
+<!-- Social proof -->
+<section class="section">
+  <div class="container">
+    <div style="margin-bottom:32px;max-width:720px">
+      <div class="eyebrow">What early drinkers say</div>
+      <h2 class="section-title">Real reviews, once we have them.</h2>
+    </div>
+    <div class="review-row">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Tastes like an actual smoothie. I kept it in my bag for a week, forgot about it, it was fine. 10/10 for the kitchen counter."</p>
+        <div class="review-meta">Jess · Los Angeles</div>
+        <div class="review-placeholder">review placeholder · launches with real customer reviews</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"I was skeptical about another gut thing. But I've actually been drinking it — every morning, not just the first three days."</p>
+        <div class="review-meta">Emma · Los Angeles</div>
+        <div class="review-placeholder">review placeholder · launches with real customer reviews</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"The caffeine lift is real but not jittery. My matcha budget just went down."</p>
+        <div class="review-meta">Mia · Los Angeles</div>
+        <div class="review-placeholder">review placeholder · launches with real customer reviews</div>
+      </div>
+    </div>
+    <div class="press-strip">As seen in · TBD post-launch</div>
+  </div>
+</section>
+
+<!-- Shop FAQ -->
+<section class="section">
+  <div class="container">
+    <div style="margin-bottom:24px;max-width:720px">
+      <div class="eyebrow">Quick answers</div>
+      <h2 class="section-title">The six questions everyone asks.</h2>
+    </div>
+
+    <details class="faq">
+      <summary>When does my order ship?</summary>
+      <div class="answer">
+        <p>Subscription orders ship in 2–4 business days from our LA warehouse. One-time orders ship the next business day. Tracking email goes out the moment a label is printed.</p>
+        <p>Full details on <a href="shipping.html">our shipping page</a>.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>How do I cancel my subscription?</summary>
+      <div class="answer">
+        <p>Log into your account and hit "Cancel subscription." Two clicks. No phone call, no retention pop-up, no "are you sure." We mean it.</p>
+        <p>See <a href="subscription-terms.html">subscription terms</a> for the fine print.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>What's in it? Any common allergens?</summary>
+      <div class="answer">
+        <p>Synbiotic base (Bacillus coagulans SNZ 1969 · XOS · Fibersol-2) + real fruit purée + green tea extract + B6/B12. No dairy, no gluten, no artificial flavors or colors. The full ingredient list and Nutrition Facts panel ship on the pouch and lock on this page pre-launch.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Can I return it if I don't like it?</summary>
+      <div class="answer">
+        <p>Yes. If your first order isn't for you, email hello@pheeew.com within 30 days and we'll refund it. You don't have to mail anything back.</p>
+        <p>Full policy on the <a href="refund.html">refund page</a>.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Is it safe during pregnancy?</summary>
+      <div class="answer">
+        <p>PHEEEW contains ~50–75mg of caffeine from green tea extract per pouch. If you're pregnant or nursing, we recommend talking with your doctor before starting any caffeinated product — including this one.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Does it work with a sensitive stomach?</summary>
+      <div class="answer">
+        <p>The prebiotic dose is intentionally low to minimize bloating, and spore-forming probiotics are generally well-tolerated. That said, if you have a clinical GI condition, we'd recommend starting with a Tester 10-pack rather than a subscription — and checking with your doctor if you're unsure.</p>
+      </div>
+    </details>
+
+    <p class="mt-24" style="color:var(--text-tertiary)">Still have questions? <a href="mailto:hello@pheeew.com">hello@pheeew.com</a> · or see the <a href="faq.html">full FAQ</a>.</p>
+  </div>
+</section>
+
+<!-- Phase 2/3 teaser -->
+<section class="section">
+  <div class="container">
+    <div class="teaser">
+      <div class="eyebrow">Coming up</div>
+      <h3>Gut + Energy is just the start.</h3>
+      <p>Phase 2 is Gut + Digestion. Phase 3 is Gut + Immunity. Each one earns the next — we only launch what the first SKU says the customer actually wants.</p>
+      <form class="teaser-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='On the list.';">
+        <input type="email" placeholder="your@email.com" required />
+        <button type="submit">Notify me when Digestion launches</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer class="footer">
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
         <div class="wordmark">PHEEEW</div>
-        <p>A smoothie for your gut. Built in LA, made in Naju, shipped from LA.</p>
+        <p>A smoothie for your gut. Los Angeles and Seoul.</p>
       </div>
       <div class="footer-col">
         <h4>Shop</h4>
         <ul>
           <li><a href="shop.html">Gut + Energy</a></li>
-          <li><a href="shop.html">Subscription</a></li>
-          <li><a href="faq.html">Shipping &amp; returns</a></li>
+          <li><a href="shop.html">Gift cards · TBD</a></li>
+          <li><a href="mailto:hello@pheeew.com?subject=Wholesale%20inquiry">Wholesale inquiries</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Brand</h4>
+        <h4>About</h4>
         <ul>
-          <li><a href="our-story.html">Our story</a></li>
-          <li><a href="science.html">Science</a></li>
-          <li><a href="community.html">Community</a></li>
+          <li><a href="about.html#story">Our story</a></li>
+          <li><a href="about.html#science">Science</a></li>
+          <li><a href="about.html#community">Community</a></li>
+          <li><a href="about.html#community">Markets</a></li>
+          <li><a href="mailto:hello@pheeew.com?subject=Press">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
           <li><a href="faq.html">FAQ</a></li>
+          <li><a href="mailto:hello@pheeew.com">Contact</a></li>
+          <li><a href="shipping.html">Shipping</a></li>
+          <li><a href="refund.html">Returns</a></li>
+          <li><a href="subscription-terms.html">Subscription management</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Say hi</h4>
+        <h4>Legal</h4>
         <ul>
-          <li><a href="mailto:hello@pheeew.com">hello@pheeew.com</a></li>
-          <li><a href="https://instagram.com/saypheeew">@saypheeew</a></li>
-          <li><a href="https://tiktok.com/@saypheeew">TikTok</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="shipping.html">Shipping Policy</a></li>
+          <li><a href="subscription-terms.html">Subscription Terms</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+          <li><a href="ccpa.html">CA Privacy Rights</a></li>
+          <li><a href="prop65.html">Prop 65</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-legal">© 2026 Pheeew, Inc. · Delaware C-Corp · All rights reserved. Team: Alex Kim, Jason Ko, Dawon Kim.</div>
+      <div>
+        <div class="footer-legal" style="margin-bottom:4px">Built by Alex Kim · Jason Ko · Dawon Kim. Los Angeles + Seoul.</div>
+        <div class="footer-legal" style="margin-bottom:4px">@saypheeew · pheeew.com · hello@pheeew.com</div>
+        <div class="footer-legal">PHEEEW, Inc. · Delaware C-Corp · Registered to do business in California</div>
+      </div>
       <div class="footer-tag">Your gut knows.</div>
     </div>
   </div>
 </footer>
 
+<!-- Sticky mobile CTA -->
+<div class="sticky-mobile-cta">
+  <div class="sm-info">
+    <div class="sm-title" id="sm-title">Core · 30-pack · Subscribe</div>
+    <div class="sm-price" id="sm-price">$72 · $2.40/pouch</div>
+  </div>
+  <button class="sm-btn" onclick="document.getElementById('add-to-cart').click()">Add</button>
+</div>
+
+<!-- Exit-intent modal -->
+<div class="modal-backdrop" id="exit-modal">
+  <div class="exit-modal">
+    <button class="modal-close" aria-label="Close" onclick="closeExit()">×</button>
+    <h3>Wait — $10 off your first sub.</h3>
+    <p>One email. Code goes straight to your inbox. Soft pitch, not pushy.</p>
+    <form onsubmit="event.preventDefault();this.innerHTML='<p style=&quot;margin:0&quot;>Sent. Check your inbox.</p>';">
+      <input type="email" placeholder="your@email.com" required />
+      <button type="submit">Send the code</button>
+    </form>
+    <p class="fine">No spam. Unsubscribe one click. <a href="privacy.html">Privacy</a>.</p>
+  </div>
+</div>
+
+<script>
+(function() {
+  var plan = 'sub';
+  var qty = 1;
+  var current = document.querySelector('.pack-card.active');
+
+  function fmtPrice(n) { return '$' + Number(n).toFixed(2).replace(/\.00$/, ''); }
+
+  function getPrice(card) {
+    var otOnly = card.getAttribute('data-ot-only') === '1';
+    var ot = parseFloat(card.getAttribute('data-ot'));
+    var sub = parseFloat(card.getAttribute('data-sub'));
+    if (plan === 'sub' && !otOnly && !isNaN(sub)) return sub;
+    return ot;
+  }
+
+  function getPer(card) {
+    var otOnly = card.getAttribute('data-ot-only') === '1';
+    if (plan === 'sub' && !otOnly) {
+      return card.getAttribute('data-per-sub') || card.getAttribute('data-per');
+    }
+    return card.getAttribute('data-per-ot') || card.getAttribute('data-per');
+  }
+
+  function updatePackRow(card) {
+    var price = getPrice(card);
+    var per = getPer(card);
+    var priceEl = card.querySelector('.price-display');
+    var perEl = card.querySelector('.per-display');
+    if (priceEl) priceEl.textContent = fmtPrice(price);
+    if (perEl && per) perEl.textContent = '$' + per + ' / pouch';
+  }
+
+  function updateAll() {
+    document.querySelectorAll('.pack-card').forEach(updatePackRow);
+    var price = getPrice(current) * qty;
+    document.getElementById('cta-price').textContent = fmtPrice(price);
+
+    var isOTOnly = current.getAttribute('data-ot-only') === '1';
+    document.getElementById('freq-step').style.display = (plan === 'sub' && !isOTOnly) ? '' : 'none';
+
+    var packTitle = current.querySelector('.pack-title').textContent;
+    var per = getPer(current);
+    var label = packTitle + ' · ' + (plan === 'sub' && !isOTOnly ? 'Subscribe' : 'One-time');
+    document.getElementById('sm-title').textContent = label;
+    document.getElementById('sm-price').textContent = fmtPrice(price) + (per ? ' · $' + per + '/pouch' : '');
+
+    var subBtn = document.querySelector('.toggle-pill[data-plan="sub"]');
+    if (isOTOnly) {
+      subBtn.setAttribute('aria-disabled', 'true');
+      subBtn.style.opacity = '0.45';
+      subBtn.style.cursor = 'not-allowed';
+    } else {
+      subBtn.removeAttribute('aria-disabled');
+      subBtn.style.opacity = '';
+      subBtn.style.cursor = '';
+    }
+  }
+
+  document.querySelectorAll('.toggle-pill').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var isOTOnly = current.getAttribute('data-ot-only') === '1';
+      if (btn.getAttribute('data-plan') === 'sub' && isOTOnly) return;
+      document.querySelectorAll('.toggle-pill').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      plan = btn.getAttribute('data-plan');
+      updateAll();
+    });
+  });
+
+  document.querySelectorAll('.pack-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+      document.querySelectorAll('.pack-card').forEach(function(c) { c.classList.remove('active'); });
+      card.classList.add('active');
+      current = card;
+      if (card.getAttribute('data-ot-only') === '1') {
+        plan = 'ot';
+        document.querySelectorAll('.toggle-pill').forEach(function(b) { b.classList.remove('active'); });
+        document.querySelector('.toggle-pill[data-plan="ot"]').classList.add('active');
+      }
+      updateAll();
+    });
+  });
+
+  var qtyVal = document.getElementById('qty-val');
+  document.getElementById('qty-minus').addEventListener('click', function() {
+    if (qty > 1) { qty--; qtyVal.textContent = qty; updateAll(); }
+  });
+  document.getElementById('qty-plus').addEventListener('click', function() {
+    if (qty < 20) { qty++; qtyVal.textContent = qty; updateAll(); }
+  });
+
+  document.getElementById('add-to-cart').addEventListener('click', function() {
+    var btn = this;
+    var original = btn.innerHTML;
+    btn.innerHTML = 'Added to cart ✓';
+    btn.style.background = 'var(--success)';
+    setTimeout(function() {
+      btn.innerHTML = original;
+      btn.style.background = '';
+    }, 1600);
+  });
+
+  var exitShown = false;
+  function showExit() {
+    if (exitShown) return;
+    if (window.innerWidth < 720) return;
+    exitShown = true;
+    document.getElementById('exit-modal').classList.add('open');
+  }
+  window.closeExit = function() {
+    document.getElementById('exit-modal').classList.remove('open');
+  };
+  document.addEventListener('mouseout', function(e) {
+    if (!e.relatedTarget && e.clientY < 10) showExit();
+  });
+  document.getElementById('exit-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeExit();
+  });
+
+  updateAll();
+})();
+</script>
+
 </body>
 </html>
-</content>
-</invoke>
