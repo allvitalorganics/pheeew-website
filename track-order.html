@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Track your order · PHEEEW</title>
+<meta name="description" content="Track a PHEEEW order by order number, or look up a carrier directly." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="home.html" class="nav-brand">PHEEEW</a>
+    <ul class="nav-links">
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <a href="shop.html" class="nav-cta">Shop Gut + Energy</a>
+  </div>
+</nav>
+
+<header class="hero container">
+  <div class="eyebrow">Track order</div>
+  <h1>Track your order.</h1>
+  <p class="sub">Look it up here, or jump straight to the carrier with your tracking number.</p>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="card" style="max-width:560px;margin:0 auto;text-align:center">
+      <div class="eyebrow">Order number</div>
+      <h3 style="margin-bottom:20px">Enter your order number</h3>
+      <form class="big-input-row" onsubmit="event.preventDefault();alert('Post-launch: this routes to Shopify order lookup.');">
+        <input type="text" placeholder="#PHEEEW-XXXXXX" />
+        <button type="submit">Track</button>
+      </form>
+      <p style="font-size:var(--text-sm);color:var(--text-quaternary);margin-top:14px">Post-launch: routes to Shopify order status.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="eyebrow">Or look up directly</div>
+    <h2 class="section-title">Carrier lookup.</h2>
+    <div class="grid grid-3">
+      <a href="https://tools.usps.com/go/TrackConfirmAction_input" class="card">
+        <h3>USPS</h3>
+        <p>Most small and starter packs ship USPS Priority.</p>
+        <div class="mt-16"><span class="btn-ghost">Track at USPS →</span></div>
+      </a>
+      <a href="https://www.ups.com/track" class="card">
+        <h3>UPS</h3>
+        <p>Larger packs and expedited ship UPS Ground.</p>
+        <div class="mt-16"><span class="btn-ghost">Track at UPS →</span></div>
+      </a>
+      <a href="https://www.fedex.com/fedextrack/" class="card">
+        <h3>FedEx</h3>
+        <p>Select accounts and select lanes.</p>
+        <div class="mt-16"><span class="btn-ghost">Track at FedEx →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="eyebrow">Typical window</div>
+        <h3>Domestic US: 3–6 business days.</h3>
+        <p>Ships within 1–3 business days of order, then transit by carrier. See <a href="shipping.html">shipping policy</a> for details.</p>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Problem with your order?</div>
+        <h3>Email us.</h3>
+        <p>Wrong item, missing item, damaged in transit — <a href="mailto:hello@pheeew.com">hello@pheeew.com</a>. We'll make it right, fast.</p>
+        <div class="mt-16"><a href="contact.html" class="btn btn-secondary">Contact us</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand"><div class="wordmark">PHEEEW</div><p>A smoothie for your gut. Los Angeles and Seoul.</p></div>
+      <div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">Gut + Energy</a></li><li><a href="gift-cards.html">Gift cards</a></li><li><a href="wholesale.html">Wholesale</a></li><li><a href="track-order.html">Track order</a></li></ul></div>
+      <div class="footer-col"><h4>About</h4><ul><li><a href="about.html#story">Our story</a></li><li><a href="about.html#science">Science</a></li><li><a href="about.html#community">Community</a></li><li><a href="journal.html">Journal</a></li><li><a href="markets.html">Markets</a></li><li><a href="press.html">Press</a></li></ul></div>
+      <div class="footer-col"><h4>Help</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li><li><a href="shipping.html">Shipping</a></li><li><a href="refund.html">Returns</a></li><li><a href="subscription-terms.html">Subscription management</a></li><li><a href="track-order.html">Track order</a></li><li><a href="account.html">Account</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="refund.html">Refund</a></li><li><a href="shipping.html">Shipping policy</a></li><li><a href="subscription-terms.html">Subscription terms</a></li><li><a href="accessibility.html">Accessibility</a></li><li><a href="ccpa.html">CA Privacy</a></li><li><a href="prop65.html">Prop 65</a></li><li><a href="cookie-policy.html">Cookies</a></li><li><a href="dmca.html">DMCA</a></li><li><a href="legal.html">Legal hub</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        <div class="footer-legal" style="margin-bottom:4px">Built by Alex Kim · Jason Ko · Dawon Kim. Los Angeles + Seoul.</div>
+        <div class="footer-legal" style="margin-bottom:4px">@saypheeew · pheeew.com · hello@pheeew.com</div>
+        <div class="footer-legal">PHEEEW, Inc. · Delaware C-Corp · Registered to do business in California</div>
+      </div>
+      <div class="footer-tag">Your gut knows.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
